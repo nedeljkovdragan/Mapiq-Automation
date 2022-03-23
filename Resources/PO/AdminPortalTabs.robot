@@ -30,3 +30,4 @@ Building Admin can see all tabs
     Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
     Sleep  5
+       
