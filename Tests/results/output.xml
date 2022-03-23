@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.10 on win32)" generated="20220323 20:49:13.614" rpa="false" schemaversion="2">
+<suite id="s1" name="Login Office Shifts" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\UserApp.robot\Login_Office_Shifts.robot">
+<test id="s1-t1" name="Login into the Office Shifts">
+<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220323 20:49:13.897" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220323 20:49:13.896" endtime="20220323 20:49:15.456"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220323 20:49:15.456" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220323 20:49:15.456" endtime="20220323 20:49:16.345"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220323 20:49:16.345" endtime="20220323 20:49:16.471"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:13.896" endtime="20220323 20:49:16.471"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220323 20:49:16.472" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220323 20:49:16.472" endtime="20220323 20:49:16.591"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:16.472" endtime="20220323 20:49:16.591"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220323 20:49:16.592" endtime="20220323 20:49:16.614"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:16.591" endtime="20220323 20:49:16.615"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:16.472" endtime="20220323 20:49:16.615"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220323 20:49:16.616" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220323 20:49:16.616" endtime="20220323 20:49:16.666"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220323 20:49:18.671" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 20:49:16.666" endtime="20220323 20:49:18.671"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220323 20:49:18.671" level="INFO">Typing text 'qa_analytics_viewer@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220323 20:49:18.671" endtime="20220323 20:49:18.787"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220323 20:49:20.796" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 20:49:18.787" endtime="20220323 20:49:20.796"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220323 20:49:20.796" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220323 20:49:20.796" endtime="20220323 20:49:20.861"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220323 20:49:22.865" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 20:49:20.862" endtime="20220323 20:49:22.865"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220323 20:49:22.866" level="INFO">Typing text 'QA-Analyt1cs-V1ewer' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220323 20:49:22.865" endtime="20220323 20:49:22.953"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220323 20:49:24.967" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 20:49:22.953" endtime="20220323 20:49:24.967"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220323 20:49:24.968" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220323 20:49:24.967" endtime="20220323 20:49:25.018"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220323 20:49:32.029" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220323 20:49:25.019" endtime="20220323 20:49:32.029"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:16.615" endtime="20220323 20:49:32.029"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:16.615" endtime="20220323 20:49:32.029"/>
+</kw>
+<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220323 20:49:32.030" endtime="20220323 20:49:34.351"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:32.030" endtime="20220323 20:49:34.351"/>
+</kw>
+<status status="PASS" starttime="20220323 20:49:13.895" endtime="20220323 20:49:34.352"/>
+</test>
+<doc>Login to Office Shifts Test
+To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/Login_Office_Shifts.robot" in the Terminal</doc>
+<status status="PASS" starttime="20220323 20:49:13.616" endtime="20220323 20:49:34.354"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Office Shifts">Login Office Shifts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
