@@ -21,3 +21,12 @@ Subscription Admin can see all tabs
     Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
     Sleep  5
+Building Admin can see all tabs
+    Element Should Be Visible    ${HOME_TAB_BUTTON}
+    Element Should Be Visible    ${SHIFTS_TAB_BUTTON}
+    Element Should Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Element Should Be Visible    ${PEOPLE_TAB_BUTTON}
+    Element Should Be Visible    ${ACCESS_TAB_BUTTON}
+    Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
+    Sleep  5

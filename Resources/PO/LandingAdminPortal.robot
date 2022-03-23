@@ -37,3 +37,14 @@ Subscription Admin Logs in
     Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
     Sleep  7
+Building Admin logs in
+    Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
+    Sleep  7
+    Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${BUILDING_ADMIN_EMAIL}
+    Sleep  7
+    Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
+    Sleep  2
+    Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${BUILDING_ADMIN_PASSWORD}
+    Sleep  2
+    Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
+    Sleep  7

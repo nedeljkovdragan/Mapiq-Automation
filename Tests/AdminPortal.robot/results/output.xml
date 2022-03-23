@@ -1,259 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.8.10 on win32)" generated="20220323 21:55:47.957" rpa="false" schemaversion="2">
-<suite id="s1" name="SubscriptionAdminLogin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\SubscriptionAdminLogin.robot">
-<test id="s1-t1" name="Login into the Admin Portal as a Subscription Admin">
+<robot generator="Robot 4.1.3 (Python 3.8.10 on win32)" generated="20220323 22:23:45.502" rpa="false" schemaversion="2">
+<suite id="s1" name="BuildingAdmin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\BuildingAdmin.robot">
+<test id="s1-t1" name="Login into the Admin Portal as a Building Admin">
 <kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220323 21:55:48.185" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220323 21:55:48.184" endtime="20220323 21:55:49.610"/>
+<msg timestamp="20220323 22:23:45.740" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220323 22:23:45.739" endtime="20220323 22:23:47.185"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220323 21:55:49.611" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220323 21:55:49.611" endtime="20220323 21:55:51.179"/>
+<msg timestamp="20220323 22:23:47.185" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
+<status status="PASS" starttime="20220323 22:23:47.185" endtime="20220323 22:23:48.490"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220323 21:55:51.179" endtime="20220323 21:55:51.306"/>
+<status status="PASS" starttime="20220323 22:23:48.490" endtime="20220323 22:23:48.621"/>
 </kw>
-<status status="PASS" starttime="20220323 21:55:48.184" endtime="20220323 21:55:51.307"/>
+<status status="PASS" starttime="20220323 22:23:45.739" endtime="20220323 22:23:48.621"/>
 </kw>
 <kw name="Subscription Admin Login" library="AdminPortalPage">
 <kw name="Subscription Admin Logs in" library="LandingAdminPortal">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220323 21:55:51.308" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220323 21:55:51.308" endtime="20220323 21:55:51.365"/>
+<msg timestamp="20220323 22:23:48.623" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220323 22:23:48.622" endtime="20220323 22:23:48.679"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:55:58.374" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20220323 21:55:51.365" endtime="20220323 21:55:58.374"/>
+<msg timestamp="20220323 22:23:55.683" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220323 22:23:48.679" endtime="20220323 22:23:55.683"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
 <arg>${SUBSCRIPTION_ADMIN_EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220323 21:55:58.374" level="INFO">Typing text 'qa_subscription_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220323 21:55:58.374" endtime="20220323 21:55:58.492"/>
+<msg timestamp="20220323 22:23:55.683" level="INFO">Typing text 'qa_subscription_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220323 22:23:55.683" endtime="20220323 22:23:55.800"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:05.505" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20220323 21:55:58.492" endtime="20220323 21:56:05.505"/>
+<msg timestamp="20220323 22:24:02.805" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220323 22:23:55.800" endtime="20220323 22:24:02.805"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:05.505" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220323 21:56:05.505" endtime="20220323 21:56:05.561"/>
+<msg timestamp="20220323 22:24:02.805" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220323 22:24:02.805" endtime="20220323 22:24:02.868"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:07.564" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:05.561" endtime="20220323 21:56:07.564"/>
+<msg timestamp="20220323 22:24:04.871" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:02.868" endtime="20220323 22:24:04.871"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
 <arg>${SUBSCRIPTION_ADMIN_PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:07.564" level="INFO">Typing text 'QA-Subscr1pt1on-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220323 21:56:07.564" endtime="20220323 21:56:07.655"/>
+<msg timestamp="20220323 22:24:04.871" level="INFO">Typing text 'QA-Subscr1pt1on-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220323 22:24:04.871" endtime="20220323 22:24:04.962"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:09.666" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:07.655" endtime="20220323 21:56:09.666"/>
+<msg timestamp="20220323 22:24:06.967" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:04.962" endtime="20220323 22:24:06.967"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:09.666" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220323 21:56:09.666" endtime="20220323 21:56:09.716"/>
+<msg timestamp="20220323 22:24:06.967" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220323 22:24:06.967" endtime="20220323 22:24:07.019"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:16.731" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:09.716" endtime="20220323 21:56:16.731"/>
+<msg timestamp="20220323 22:24:14.034" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:07.019" endtime="20220323 22:24:14.034"/>
 </kw>
-<status status="PASS" starttime="20220323 21:55:51.308" endtime="20220323 21:56:16.731"/>
+<status status="PASS" starttime="20220323 22:23:48.622" endtime="20220323 22:24:14.034"/>
 </kw>
-<status status="PASS" starttime="20220323 21:55:51.307" endtime="20220323 21:56:16.731"/>
+<status status="PASS" starttime="20220323 22:23:48.622" endtime="20220323 22:24:14.034"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220323 21:56:16.732" endtime="20220323 21:56:18.940"/>
+<status status="PASS" starttime="20220323 22:24:14.036" endtime="20220323 22:24:16.290"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:16.732" endtime="20220323 21:56:18.940"/>
+<status status="PASS" starttime="20220323 22:24:14.035" endtime="20220323 22:24:16.290"/>
 </kw>
-<status status="PASS" starttime="20220323 21:55:48.183" endtime="20220323 21:56:18.940"/>
+<status status="PASS" starttime="20220323 22:23:45.738" endtime="20220323 22:24:16.291"/>
 </test>
-<test id="s1-t2" name="Subscription Admin can see all tabs">
+<test id="s1-t2" name="Building Admin can see all tabs">
 <kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220323 21:56:18.943" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220323 21:56:18.942" endtime="20220323 21:56:20.288"/>
+<msg timestamp="20220323 22:24:16.294" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220323 22:24:16.294" endtime="20220323 22:24:17.618"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220323 21:56:20.288" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220323 21:56:20.288" endtime="20220323 21:56:21.699"/>
+<msg timestamp="20220323 22:24:17.619" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
+<status status="PASS" starttime="20220323 22:24:17.618" endtime="20220323 22:24:20.184"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220323 21:56:21.699" endtime="20220323 21:56:21.834"/>
+<status status="PASS" starttime="20220323 22:24:20.184" endtime="20220323 22:24:20.307"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:18.942" endtime="20220323 21:56:21.834"/>
+<status status="PASS" starttime="20220323 22:24:16.293" endtime="20220323 22:24:20.307"/>
 </kw>
-<kw name="Subscription Admin Login" library="AdminPortalPage">
-<kw name="Subscription Admin Logs in" library="LandingAdminPortal">
+<kw name="Building Admin Admin Login" library="AdminPortalPage">
+<kw name="Building Admin logs in" library="LandingAdminPortal">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:21.836" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220323 21:56:21.836" endtime="20220323 21:56:21.892"/>
+<msg timestamp="20220323 22:24:20.308" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220323 22:24:20.308" endtime="20220323 22:24:20.367"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:28.901" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:21.892" endtime="20220323 21:56:28.901"/>
+<msg timestamp="20220323 22:24:27.368" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:20.368" endtime="20220323 22:24:27.368"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SUBSCRIPTION_ADMIN_EMAIL}</arg>
+<arg>${BUILDING_ADMIN_EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:28.901" level="INFO">Typing text 'qa_subscription_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220323 21:56:28.901" endtime="20220323 21:56:29.020"/>
+<msg timestamp="20220323 22:24:27.369" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220323 22:24:27.368" endtime="20220323 22:24:27.480"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:36.029" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:29.020" endtime="20220323 21:56:36.029"/>
+<msg timestamp="20220323 22:24:34.492" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:27.480" endtime="20220323 22:24:34.492"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:36.029" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220323 21:56:36.029" endtime="20220323 21:56:36.091"/>
+<msg timestamp="20220323 22:24:34.492" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220323 22:24:34.492" endtime="20220323 22:24:34.551"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:38.104" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:36.091" endtime="20220323 21:56:38.104"/>
+<msg timestamp="20220323 22:24:36.555" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:34.551" endtime="20220323 22:24:36.555"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SUBSCRIPTION_ADMIN_PASSWORD}</arg>
+<arg>${BUILDING_ADMIN_PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:38.104" level="INFO">Typing text 'QA-Subscr1pt1on-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220323 21:56:38.104" endtime="20220323 21:56:38.198"/>
+<msg timestamp="20220323 22:24:36.555" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220323 22:24:36.555" endtime="20220323 22:24:36.644"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:40.212" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:38.198" endtime="20220323 21:56:40.212"/>
+<msg timestamp="20220323 22:24:38.657" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:36.644" endtime="20220323 22:24:38.657"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220323 21:56:40.212" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220323 21:56:40.212" endtime="20220323 21:56:40.263"/>
+<msg timestamp="20220323 22:24:38.657" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220323 22:24:38.657" endtime="20220323 22:24:38.709"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:47.278" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:40.263" endtime="20220323 21:56:47.278"/>
+<msg timestamp="20220323 22:24:45.723" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:38.709" endtime="20220323 22:24:45.723"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:21.835" endtime="20220323 21:56:47.278"/>
+<status status="PASS" starttime="20220323 22:24:20.308" endtime="20220323 22:24:45.723"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:21.835" endtime="20220323 21:56:47.278"/>
+<status status="PASS" starttime="20220323 22:24:20.308" endtime="20220323 22:24:45.723"/>
 </kw>
-<kw name="Subscription Admin Permissions to see all tabs" library="AdminPortalPage">
-<kw name="Subscription Admin can see all tabs" library="AdminPortalTabs">
+<kw name="Building Admin Admin Permissions to see all tabs" library="AdminPortalPage">
+<kw name="Building Admin can see all tabs" library="AdminPortalTabs">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${HOME_TAB_BUTTON}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220323 21:56:47.306" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[1]' is displayed.</msg>
-<status status="PASS" starttime="20220323 21:56:47.280" endtime="20220323 21:56:47.306"/>
+<msg timestamp="20220323 22:24:45.752" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[1]' is displayed.</msg>
+<status status="PASS" starttime="20220323 22:24:45.725" endtime="20220323 22:24:45.752"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${SHIFTS_TAB_BUTTON}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220323 21:56:47.329" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[2]' is displayed.</msg>
-<status status="PASS" starttime="20220323 21:56:47.307" endtime="20220323 21:56:47.329"/>
+<msg timestamp="20220323 22:24:45.773" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[2]' is displayed.</msg>
+<status status="PASS" starttime="20220323 22:24:45.753" endtime="20220323 22:24:45.773"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${BUILDINGS_TAB_BUTTON}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220323 21:56:47.348" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[3]' is displayed.</msg>
-<status status="PASS" starttime="20220323 21:56:47.329" endtime="20220323 21:56:47.348"/>
+<msg timestamp="20220323 22:24:45.794" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[3]' is displayed.</msg>
+<status status="PASS" starttime="20220323 22:24:45.774" endtime="20220323 22:24:45.794"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${PEOPLE_TAB_BUTTON}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220323 21:56:47.366" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[4]' is displayed.</msg>
-<status status="PASS" starttime="20220323 21:56:47.348" endtime="20220323 21:56:47.366"/>
+<msg timestamp="20220323 22:24:45.813" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[4]' is displayed.</msg>
+<status status="PASS" starttime="20220323 22:24:45.794" endtime="20220323 22:24:45.813"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${ACCESS_TAB_BUTTON}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220323 21:56:47.385" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[5]' is displayed.</msg>
-<status status="PASS" starttime="20220323 21:56:47.366" endtime="20220323 21:56:47.385"/>
+<msg timestamp="20220323 22:24:45.830" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[5]' is displayed.</msg>
+<status status="PASS" starttime="20220323 22:24:45.813" endtime="20220323 22:24:45.831"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${ANALYTICS_TAB_BUTTON}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220323 21:56:47.405" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[6]' is displayed.</msg>
-<status status="PASS" starttime="20220323 21:56:47.385" endtime="20220323 21:56:47.405"/>
+<msg timestamp="20220323 22:24:45.848" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[6]' is displayed.</msg>
+<status status="PASS" starttime="20220323 22:24:45.831" endtime="20220323 22:24:45.848"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${SETTINGS_TAB_BUTTON}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220323 21:56:47.423" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[7]' is displayed.</msg>
-<status status="PASS" starttime="20220323 21:56:47.405" endtime="20220323 21:56:47.423"/>
+<msg timestamp="20220323 22:24:45.866" level="INFO">Element 'xpath://body/header[@class='Header']//tab-viewer//div[@class='TabViewer-header']/button[7]' is displayed.</msg>
+<status status="PASS" starttime="20220323 22:24:45.849" endtime="20220323 22:24:45.866"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220323 21:56:52.435" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220323 21:56:47.423" endtime="20220323 21:56:52.435"/>
+<msg timestamp="20220323 22:24:50.874" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220323 22:24:45.866" endtime="20220323 22:24:50.874"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:47.279" endtime="20220323 21:56:52.435"/>
+<status status="PASS" starttime="20220323 22:24:45.724" endtime="20220323 22:24:50.874"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:47.279" endtime="20220323 21:56:52.435"/>
+<status status="PASS" starttime="20220323 22:24:45.724" endtime="20220323 22:24:50.874"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220323 21:56:52.436" endtime="20220323 21:56:54.658"/>
+<status status="PASS" starttime="20220323 22:24:50.875" endtime="20220323 22:24:53.096"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:52.436" endtime="20220323 21:56:54.658"/>
+<status status="PASS" starttime="20220323 22:24:50.875" endtime="20220323 22:24:53.096"/>
 </kw>
-<status status="PASS" starttime="20220323 21:56:18.942" endtime="20220323 21:56:54.659"/>
+<status status="PASS" starttime="20220323 22:24:16.292" endtime="20220323 22:24:53.097"/>
 </test>
-<doc>Login to Office Shifts Test
-To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/Login_Office_Shifts.robot" in the Terminal</doc>
-<status status="PASS" starttime="20220323 21:55:47.959" endtime="20220323 21:56:54.660"/>
+<doc>Tests for a Building Admin
+To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/SubscriptionAdmin.robot" in the Terminal</doc>
+<status status="PASS" starttime="20220323 22:23:45.504" endtime="20220323 22:24:53.099"/>
 </suite>
 <statistics>
 <total>
@@ -262,7 +262,7 @@ To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d result
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="SubscriptionAdminLogin">SubscriptionAdminLogin</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="BuildingAdmin">BuildingAdmin</stat>
 </suite>
 </statistics>
 <errors>

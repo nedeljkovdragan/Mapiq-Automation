@@ -1,6 +1,6 @@
 *** Settings ***
-Documentation  Login to Office Shifts Test
-...            To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/Login_Office_Shifts.robot" in the Terminal
+Documentation  Tests for a Subscription Admin
+...            To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/SubscriptionAdmin.robot" in the Terminal
 Resource  ../../Resources/SetupTeardown.robot
 Resource  ../../Resources/AdminPortalPage.robot
 Resource  ../../Resources/AdminPortalPage.robot
