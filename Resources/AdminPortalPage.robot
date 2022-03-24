@@ -3,6 +3,8 @@ Library  SeleniumLibrary
 Resource  ./PO/LandingAdminPortal.robot
 Resource  ./PO/AdminPortalTabs.robot
 Resource  ./PO/AdminPortalTabs.robot
+Resource  ./PO/AdminPortalTabs.robot
+Resource  ./PO/AdminPortalTabs.robot
 *** Variables ***
 
 
@@ -31,7 +33,11 @@ Shift Assistant Admin has Permissions to see Home, Shifts, People, and Settings 
 Shift Host Admin Login
     Shift Host Admin logs in
 Shift Host Admin has Permissions to see Home, Shifts, and Settings tabs but not Buildings, People, Access, and Analytics tab
-    Shift Host Admin Home, Shifts, and Settings tabs but not Buildings, People, Access, and Analytics tab
-
+    Shift Host Admin see Home, Shifts, and Settings tabs but not Buildings, People, Access, and Analytics tab
+##################### Analytics Viewer Admin Tests: #######################
+Analytics Viewer Admin Login
+    Analytics Viewer Admin logs in
+Analytics Viewer has Permissions to see only Analytics tab
+    Analytics Viewer see Analytics tab only
 
 

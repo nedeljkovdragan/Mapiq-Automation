@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  Tests for a Shift Assistans Admin
-...            To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/ShiftAssistantAdmin.robot" in the Terminal
+...            To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/Shift HostAdmin.robot" in the Terminal
 Resource  ../../Resources/SetupTeardown.robot
 Resource  ../../Resources/AdminPortalPage.robot
 Resource  ../../Resources/AdminPortalPage.robot

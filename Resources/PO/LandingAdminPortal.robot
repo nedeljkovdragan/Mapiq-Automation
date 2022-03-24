@@ -82,3 +82,14 @@ Shift Host Admin logs in
     Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
     Sleep  7
+Analytics Viewer Admin logs in
+     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
+    Sleep  7
+    Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${ANALYTICS_VIEWER_EMAIL}
+    Sleep  7
+    Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
+    Sleep  2
+    Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${ANALYTICS_VIEWER_PASSWORD}
+    Sleep  2
+    Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
+    Sleep  7
