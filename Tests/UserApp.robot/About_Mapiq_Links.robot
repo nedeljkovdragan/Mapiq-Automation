@@ -14,21 +14,21 @@ ${BROWSER} =  chrome
 ${URL} =  https://shifts-test.atlas.mapiq-universe.com/
 
 *** Test cases ***
-#Get help in our support center link navigates a user to a right page
-    #Go to the Office Shifts Page
-    #Log in to the Office Shifts Page
-    #Click on the "Your Profile"
-    #Get help in our support center link works
-#FAQ link navigates a user to a right page
-    #Go to the Office Shifts Page
-    #Log in to the Office Shifts Page
-    #Click on the "Your Profile"
-    #FAQ link navigates a user to a right page
-Privacy Policy link navigates a user to a right page
+Get help in our support center link navigates a user to a right page
     Go to the Office Shifts Page
     Log in to the Office Shifts Page
     Click on the "Your Profile"
-    Privacy Policy link navigates a user to a right page
+    Get help in our support center link works
+FAQ link navigates a user to a right page
+    Go to the Office Shifts Page
+    Log in to the Office Shifts Page
+    Click on the "Your Profile"
+    FAQ link navigates a user to a right page
+#Privacy Policy link navigates a user to a right page                                Currently this test has an issue of App redirecting to Microsoft login page
+    #Go to the Office Shifts Page
+    #Log in to the Office Shifts Page
+    #Click on the "Your Profile"
+    #Privacy Policy link navigates a user to a right page
 EULA link navigates a user to a right page
     Go to the Office Shifts Page
     Log in to the Office Shifts Page

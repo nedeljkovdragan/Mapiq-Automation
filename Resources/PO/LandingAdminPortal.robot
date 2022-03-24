@@ -60,3 +60,14 @@ Shift Admin logs in
     Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
     Sleep  7
+Shift Assistant Admin logs in   
+    Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
+    Sleep  7
+    Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SHIFT_ASSISTANT_EMAIL}
+    Sleep  7
+    Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
+    Sleep  2
+    Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${SHIFT_ASSISTANT_PASSWORD}
+    Sleep  2
+    Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
+    Sleep  7

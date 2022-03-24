@@ -41,4 +41,13 @@ Shift Admin can see Home, Shifts, People, Access, Analytics, and Settings tabs, 
     Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
     Sleep  7
+Shift Assistant Admin see Home, Shifts, People, and Settings tabs but not Buildings, Access, and Analytics tab
+    Element Should Be Visible    ${HOME_TAB_BUTTON}
+    Element Should Be Visible    ${SHIFTS_TAB_BUTTON}
+    Element Should Not Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Element Should Be Visible    ${PEOPLE_TAB_BUTTON}
+    Element Should Not Be Visible   ${ACCESS_TAB_BUTTON}
+    Element Should Not Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
+    Sleep  7
        

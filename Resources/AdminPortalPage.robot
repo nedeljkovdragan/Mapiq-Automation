@@ -7,6 +7,8 @@ Resource  ./PO/AdminPortalTabs.robot
 Resource  ./PO/AdminPortalTabs.robot
 Resource  ./PO/AdminPortalTabs.robot
 Resource  ./PO/AdminPortalTabs.robot
+Resource  ./PO/AdminPortalTabs.robot
+Resource  ./PO/AdminPortalTabs.robot
 
 *** Variables ***
 
@@ -27,3 +29,9 @@ Shift Admin Login
     Shift Admin logs in
 Shift Admin Permissions to see Home, Shifts, People, Access, Analytics, and Settings tabs but not Buildings tab
     Shift Admin can see Home, Shifts, People, Access, Analytics, and Settings tabs, but not Buildings tab
+##################### Shift Assistant Admin Tests: #######################
+Shift Assistant Admin Login
+    Shift Assistant Admin logs in
+Shift Assistant Admin Permissions to see Home, Shifts, People, and Settings tabs but not Buildings, Access, and Analytics tab
+    Shift Assistant Admin see Home, Shifts, People, and Settings tabs but not Buildings, Access, and Analytics tab
+
