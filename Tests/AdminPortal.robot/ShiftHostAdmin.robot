@@ -13,8 +13,8 @@ ${BROWSER} =  chrome
 ${URL} =  https://admin-test.mapiq-universe.com/#
 
 *** Test cases ***
-Login into the Admin Portal as a Shift Assistant Admin   
-    Shift Assistant Admin Login
-Shift Assistant Admin Permissions
-    Shift Assistant Admin Login
-    Shift Assistant Admin has Permissions to see Home, Shifts, People, and Settings tabs but not Buildings, Access, and Analytics tab
+Login into the Admin Portal as a Shift Host Admin   
+    Shift Host Admin Login
+Shift Host Admin can see Home, Shifts, People, Access, Analytics, and Settings tabs but not Buildings tab
+    Shift Host Admin Login
+    Shift Host Admin has Permissions to see Home, Shifts, and Settings tabs but not Buildings, People, Access, and Analytics tab
