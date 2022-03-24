@@ -1,8 +1,5 @@
 *** Settings ***
-Documentation  This page contains all buttons and 
-...            input fields variables for the Login flow 
-...            for the Office Shifts
-...
+Documentation  This page contains elements for the log in flow for Office Shifts
 Library  SeleniumLibrary 
 
 *** Variables ***

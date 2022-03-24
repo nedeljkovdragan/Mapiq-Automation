@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  This page contains elements for the log in flow for Admin Portal
 Library  SeleniumLibrary 
 
 *** Variables ***
@@ -45,6 +46,17 @@ Building Admin logs in
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
     Sleep  2
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${BUILDING_ADMIN_PASSWORD}
+    Sleep  2
+    Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
+    Sleep  7
+Shift Admin logs in
+    Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
+    Sleep  7
+    Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SHIFT_ADMIN_EMAIL}
+    Sleep  7
+    Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
+    Sleep  2
+    Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${SHIFT_ADMIN_PASSWORD}
     Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
     Sleep  7
