@@ -3,11 +3,6 @@ Documentation  Tests for a Shift Admin
 ...            To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/ShiftAdmin.robot" in the Terminal
 Resource  ../../Resources/SetupTeardown.robot
 Resource  ../../Resources/AdminPortalPage.robot
-Resource  ../../Resources/AdminPortalPage.robot
-Resource  ../../Resources/AdminPortalPage.robot
-Resource  ../../Resources/AdminPortalPage.robot
-Resource  ../../Resources/AdminPortalPage.robot
-Resource  ../../Resources/AdminPortalPage.robot
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 

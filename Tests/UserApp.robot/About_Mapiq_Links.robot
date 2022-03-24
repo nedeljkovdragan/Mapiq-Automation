@@ -3,8 +3,6 @@ Documentation  Login to Office Shifts Test
 ...            To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/About_Mapiq_Links.robot" in the Terminal
 Resource  ../../Resources/SetupTeardown.robot
 Resource  ../../Resources/OfficeShiftsPage.robot
-Resource  ../../Resources/OfficeShiftsPage.robot
-Resource  ../../Resources/OfficeShiftsPage.robot
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
