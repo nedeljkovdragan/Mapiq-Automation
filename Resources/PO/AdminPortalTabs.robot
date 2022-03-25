@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  This page contains elements for all tabs buttons, 
-...            As we want to confirm that each Admin has a permission to see a specific tabs
+...            As we want to confirm that each Admin has a permission to see a specific tab
 Library  SeleniumLibrary 
 
 

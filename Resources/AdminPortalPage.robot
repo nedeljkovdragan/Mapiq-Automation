@@ -2,9 +2,6 @@
 Library  SeleniumLibrary 
 Resource  ./PO/LandingAdminPortal.robot
 Resource  ./PO/AdminPortalTabs.robot
-Resource  ./PO/AdminPortalTabs.robot
-Resource  ./PO/AdminPortalTabs.robot
-Resource  ./PO/AdminPortalTabs.robot
 *** Variables ***
 
 

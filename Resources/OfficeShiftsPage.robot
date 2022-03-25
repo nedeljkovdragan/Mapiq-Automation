@@ -12,7 +12,7 @@ Go to the Office Shifts Page
 Log in to the Office Shifts Page
     LandingOfficeShifts.Log in
 Logout of the Office Shifts Page
-    OfficeShiftsYourShifts.Sign Out of the Office Shifts
+    OfficeShiftsYourProfile.Sign Out of the Office Shifts
 Click on the "Your Profile"
     OfficeShiftsYourProfile."Your Profile" click
 Get help in our support center link works

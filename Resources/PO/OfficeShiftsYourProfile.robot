@@ -10,6 +10,7 @@ Library    Telnet
 Library    Dialogs
 
 *** Variables ***
+${OS_FIRST_SIGN_IN_BUTTON}  xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton'] 
 ${YOUR_PROFILE_BUTTON}  css:.Header-right [data-bind='click\: showProfilePage']
 ${SIGN_OUT_BUTTON_OFFICE_SHIFTS}  css:.ProfilePage section:nth-child(2) button
 ${QUESTIONS}  css:a[title='testcontact@test.com']  #This one should be changed when we put actuall link text
@@ -30,8 +31,10 @@ ${EULA_TITLE}  xpath:/html/body/main[@class='main-wrapper']/header[@class='subpa
 
 *** Keywords ***
 Sign Out of the Office Shifts
+    Click Button    ${YOUR_PROFILE_BUTTON} 
     Click Button    ${SIGN_OUT_BUTTON_OFFICE_SHIFTS}
-    Sleep  2
+    Sleep  6
+    Element Should Be Visible    ${OS_FIRST_SIGN_IN_BUTTON}
 "Your Profile" click
     Click Button  ${YOUR_PROFILE_BUTTON}
     Sleep  5
