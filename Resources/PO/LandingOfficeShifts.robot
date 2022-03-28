@@ -8,8 +8,8 @@ ${OS_EMAIL_ADDRESS_FIELD}  id=signInName
 ${CONTINUE_BUTTON}  xpath:/html//button[@id='continue']
 ${OS_PASSWORD_FIELD}  xpath:/html//input[@id='password']
 ${OS_SECOND_SIGN_IN_BUTTON}  xpath:/html//button[@id='next']
-${EMAIL_ANALYTICS_VIEWER}  qa_analytics_viewer@test1.mapiq.net
-${PASSWORD_ANALYTICS_VIEWER}  QA-Analyt1cs-V1ewer
+${EMAIL_ANALYTICS_VIEWER}  qa_subscription_admin@test1.mapiq.net
+${PASSWORD_ANALYTICS_VIEWER}  QA-Subscr1pt1on-Adm1n
 
 *** Keywords ***
 Navigate To  
@@ -18,7 +18,7 @@ Verify Page Loaded
     Wait Until Element Contains    ${OS_FIRST_SIGN_IN_BUTTON}    Sign in
 Log in 
     Click Button    ${OS_FIRST_SIGN_IN_BUTTON}
-    Sleep  2
+    Sleep  6
     Input Text  ${OS_EMAIL_ADDRESS_FIELD}  ${EMAIL_ANALYTICS_VIEWER}
     Sleep  2
     Click Button  ${CONTINUE_BUTTON}

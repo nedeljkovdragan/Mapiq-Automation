@@ -2,6 +2,8 @@
 Library  SeleniumLibrary
 Resource  ./PO/LandingOfficeShifts.robot 
 Resource  ./PO/OfficeShiftsYourShifts.robot
+Resource  ./PO/OfficeShiftsYourShifts.robot
+Resource  ./PO/OfficeShiftsYourShifts.robot
 Resource  ./PO/OfficeShiftsYourProfile.robot
 *** Variables ***
 
@@ -23,7 +25,12 @@ Privacy Policy link navigates a user to a right page
     OfficeShiftsYourProfile.Privacy Policy navigation
 EULA link navigates a user to a right page
     OfficeShiftsYourProfile.EULA navigation
-
+Book a shift for a current day, first building
+    OfficeShiftsYourShifts.Booking a shift for a current day, first building
+Edit a shift for a current day
+    OfficeShiftsYourShifts.Edit a current day shift
+Delete a shift for a current day
+    OfficeShiftsYourShifts.Delete a current day shift
     
 
     
