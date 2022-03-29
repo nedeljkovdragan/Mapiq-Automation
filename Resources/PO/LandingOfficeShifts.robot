@@ -3,6 +3,7 @@ Documentation  This page contains elements for the log in flow for Office Shifts
 Library  SeleniumLibrary 
 
 *** Variables ***
+${URL} =  https://shifts-test.atlas.mapiq-universe.com/
 ${OS_FIRST_SIGN_IN_BUTTON}  xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton'] 
 ${OS_EMAIL_ADDRESS_FIELD}  id=signInName  
 ${CONTINUE_BUTTON}  xpath:/html//button[@id='continue']
@@ -20,10 +21,9 @@ Log in
     Click Button    ${OS_FIRST_SIGN_IN_BUTTON}
     Sleep  6
     Input Text  ${OS_EMAIL_ADDRESS_FIELD}  ${EMAIL_ANALYTICS_VIEWER}
-    Sleep  2
+    Sleep  4
     Click Button  ${CONTINUE_BUTTON}
-    Sleep  2
+    Sleep  8
     Input Text    ${OS_PASSWORD_FIELD}    ${PASSWORD_ANALYTICS_VIEWER}
-    Sleep  2
     Click Button    ${OS_SECOND_SIGN_IN_BUTTON}
-    Sleep  7
+    Sleep  10

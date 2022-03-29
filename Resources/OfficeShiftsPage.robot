@@ -4,6 +4,9 @@ Resource  ./PO/LandingOfficeShifts.robot
 Resource  ./PO/OfficeShiftsYourShifts.robot
 Resource  ./PO/OfficeShiftsYourShifts.robot
 Resource  ./PO/OfficeShiftsYourShifts.robot
+Resource  ./PO/OfficeShiftsYourShifts.robot
+Resource  ./PO/OfficeShiftsYourShifts.robot
+Resource  ./PO/OfficeShiftsYourShifts.robot
 Resource  ./PO/OfficeShiftsYourProfile.robot
 *** Variables ***
 
@@ -25,12 +28,16 @@ Privacy Policy link navigates a user to a right page
     OfficeShiftsYourProfile.Privacy Policy navigation
 EULA link navigates a user to a right page
     OfficeShiftsYourProfile.EULA navigation
-Book a shift for a current day, first building
+Book a shift for a current day, for the first building
     OfficeShiftsYourShifts.Booking a shift for a current day, first building
 Edit a shift for a current day
     OfficeShiftsYourShifts.Edit a current day shift
 Delete a shift for a current day
     OfficeShiftsYourShifts.Delete a current day shift
+End user checks in for the current day
+    OfficeShiftsYourShifts.End User checks in for today
+End User sets the status to "Not at the office"
+    OfficeShiftsYourShifts.End User sets "Not at the Office status"
     
 
     

@@ -15,56 +15,93 @@ ${SETTINGS_TAB_BUTTON}  xpath=//button[contains(.,'Settings')]
 
 *** Keywords ***
 Subscription Admin can see all tabs
+    Sleep  2
     Element Should Be Visible    ${HOME_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SHIFTS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${PEOPLE_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${ACCESS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
-    Sleep  5
+    Sleep  2
 Building Admin can see all tabs
     Element Should Be Visible    ${HOME_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SHIFTS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${PEOPLE_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${ACCESS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
-    Sleep  5
+    Sleep  2
 Shift Admin can see Home, Shifts, People, Access, Analytics, and Settings tabs, but not Buildings tab
     Element Should Be Visible    ${HOME_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SHIFTS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${PEOPLE_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${ACCESS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
-    Sleep  7
+    Sleep  2
 Shift Assistant Admin see Home, Shifts, People, and Settings tabs but not Buildings, Access, and Analytics tab
     Element Should Be Visible    ${HOME_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SHIFTS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${PEOPLE_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible   ${ACCESS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
-    Sleep  7
+    Sleep  2
 Shift Host Admin see Home, Shifts, and Settings tabs but not Buildings, People, Access, and Analytics tab
     Element Should Be Visible    ${HOME_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SHIFTS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${PEOPLE_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible   ${ACCESS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${SETTINGS_TAB_BUTTON}
-    Sleep  7
+    Sleep  2
 Analytics Viewer see Analytics tab only
     Element Should Not Be Visible   ${HOME_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible   ${SHIFTS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${BUILDINGS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${PEOPLE_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible   ${ACCESS_TAB_BUTTON}
+    Sleep  2
     Element Should Be Visible    ${ANALYTICS_TAB_BUTTON}
+    Sleep  2
     Element Should Not Be Visible    ${SETTINGS_TAB_BUTTON}
-    Sleep  7
+    Sleep  2

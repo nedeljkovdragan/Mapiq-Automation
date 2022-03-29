@@ -3,6 +3,7 @@ Documentation  This page contains elements for the log in flow for Admin Portal
 Library  SeleniumLibrary 
 
 *** Variables ***
+${URL} =  https://shifts-test.atlas.mapiq-universe.com/
 ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}  //body/log-in[@class='Body Login-body']//button[@class='MpqButton']
 ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  id=signInName
 ${ADMIN_PORTAL_CONTINUE_BUTTON}  xpath:/html//button[@id='continue']
@@ -26,14 +27,14 @@ ${ANALYTICS_VIEWER_PASSWORD}  QA-Analyt1cs-V1ewer
 Navigate To  
     Go to  ${URL} 
 Verify Page Loaded
-    Wait Until Element Contains    ${OS_FIRST_SIGN_IN_BUTTON}    Sign in
+    Wait Until Element Contains    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}    Sign in
 Subscription Admin Logs in 
     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
     Sleep  7
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SUBSCRIPTION_ADMIN_EMAIL}
     Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
-    Sleep  2
+    Sleep  7
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${SUBSCRIPTION_ADMIN_PASSWORD}
     Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
