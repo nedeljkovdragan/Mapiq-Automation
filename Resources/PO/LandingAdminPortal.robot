@@ -30,7 +30,7 @@ Verify Page Loaded
     Wait Until Element Contains    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}    Sign in
 Subscription Admin Logs in 
     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
-    Sleep  7
+    #####################################Wait Until Element Contains    locator    text
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SUBSCRIPTION_ADMIN_EMAIL}
     Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
