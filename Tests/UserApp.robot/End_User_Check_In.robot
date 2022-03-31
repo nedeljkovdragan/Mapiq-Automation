@@ -5,6 +5,8 @@ Resource  ../../Resources/SetupTeardown.robot
 Resource  ../../Resources/OfficeShiftsPage.robot
 Resource  ../../Resources/OfficeShiftsPage.robot
 Resource  ../../Resources/OfficeShiftsPage.robot
+Resource  ../../Resources/OfficeShiftsPage.robot
+Resource  ../../Resources/OfficeShiftsPage.robot
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
@@ -14,6 +16,7 @@ ${BROWSER} =  chrome
 ${URL} =  https://shifts-test.atlas.mapiq-universe.com/
 
 *** Test cases ***
+Book a shift as an End User for a current day    #Because the End User has to have a booked shift for a current day so he can check in
 End User checks in
     Go to the Office Shifts Page
     Log in to the Office Shifts Page

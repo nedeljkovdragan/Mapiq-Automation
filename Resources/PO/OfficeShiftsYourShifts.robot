@@ -31,58 +31,57 @@ ${NOT_AT_THE_OFFICE_POPUP_BUTTON}  xpath=/html/body//page-content//calendar-view
 ${NOT_AT_THE_OFFICE_STATUS}  xpath=//body//page-content//calendar-view/div[@class='CalendarView weekCount-3']/div[@class='CalendarView-topTiles']/div/check-in-status-selector//span[@class='CheckInStatusSelector-label']
 *** Keywords ***
 Booking a shift for a current day, first building
-    Sleep   5
+    Wait Until Element Is Visible    ${CURRENT_DAY}
     Click Element    ${CURRENT_DAY}
-    Sleep   2
+    Wait Until Element Is Visible   ${DAY_OVERVIEW_BOOK_BUTTON}
     Click Element    ${DAY_OVERVIEW_BOOK_BUTTON}
-    Sleep   2
+    Wait Until Element Is Visible  ${SHOW_ALL_WORKSPACES_BUTTON}
     Click Element    ${SHOW_ALL_WORKSPACES_BUTTON}
-    Sleep   2
+    Wait Until Element Is Visible  ${FIRST_BUILDING}
     Click Element    ${FIRST_BUILDING}
-    Sleep   2 
+    Wait Until Element Is Visible  ${FIRST_FLOOR}
     Click Element    ${FIRST_FLOOR}
-    Sleep   2
+    Wait Until Element Is Visible  ${FIRST_AREA}
     Click Element    ${FIRST_AREA}
-    Sleep   2
+    Wait Until Element Is Visible  ${CONFIRM_BOOKING_BUTTON}
     Click Element    ${CONFIRM_BOOKING_BUTTON}
-    Sleep   1
+    Sleep  1
     Element Should Contain    ${STATUS_MESSAGE}    You’re good to go to the office
-    Sleep   2
 Edit a current day shift
-    Sleep   2
+    Wait Until Element Is Visible  ${BOOKED_SHIFT_CHECKMARK_BUTTON}
     Click Element    ${BOOKED_SHIFT_CHECKMARK_BUTTON}
-    Sleep   5
+    Wait Until Element Is Visible  ${EDIT_SHIFT_BUTTON}
     Click Element    ${EDIT_SHIFT_BUTTON}
+    Wait Until Element Is Visible  ${SHOW_ALL_WORKSPACES_BUTTON}
     Click Element    ${SHOW_ALL_WORKSPACES_BUTTON}
+    Wait Until Element Is Visible  ${SECOND_BUILDING}
     Click Element    ${SECOND_BUILDING}
-    Sleep   2 
+    Wait Until Element Is Visible  ${FIRST_FLOOR}
     Click Element    ${FIRST_FLOOR}
-    Sleep   2 
+    Wait Until Element Is Visible  ${MODIFY_BOOKING_BUTTON}
     Click Element    ${MODIFY_BOOKING_BUTTON}
-    Sleep   1
-    Element Should Contain    ${STATUS_MESSAGE}   Location successfully updated
-    Sleep   1   
+    Sleep  1
+    Element Should Contain    ${STATUS_MESSAGE}   Location successfully updated 
 Delete a current day shift
-    Sleep   2
+    Wait Until Element Is Visible  ${BOOKED_SHIFT_CHECKMARK_BUTTON}
     Click Element    ${BOOKED_SHIFT_CHECKMARK_BUTTON}
+    Wait Until Element Is Visible  ${DELETE_SHIFT_BUTTON}
     Click Element    ${DELETE_SHIFT_BUTTON}
-    Sleep  2
+    Sleep  5
+    Wait Until Element Is Visible  ${CURRENT_DAY}
     Element Should Be Visible    ${CURRENT_DAY}
-    Sleep  2
 End User checks in for today  #For this one you need to have a booked shift for a current day
-    Sleep  2
+    Wait Until Element Is Visible  ${STATUS_BUTTON}
     Click Element    ${STATUS_BUTTON}
-    Sleep  6
+    Wait Until Element Is Visible  ${STATUS_BUTTON}
     Element Should Contain    ${STATUS_BUTTON}     At the office
-    Sleep   1
 End User sets "Not at the Office status"
-    Sleep  2
+    Wait Until Element Is Visible  ${STATUS_BUTTON} 
     Click Element    ${STATUS_BUTTON} 
-    Sleep  14
+    Wait Until Element Is Visible  ${NOT_AT_THE_OFFICE_POPUP_BUTTON}
     Click Element    ${NOT_AT_THE_OFFICE_POPUP_BUTTON}
-    Sleep  2
+    Wait Until Element Is Visible  ${NOT_AT_THE_OFFICE_STATUS}
     Element Should Contain    ${NOT_AT_THE_OFFICE_STATUS}    Not at the office
-    Sleep   1
 
 
 

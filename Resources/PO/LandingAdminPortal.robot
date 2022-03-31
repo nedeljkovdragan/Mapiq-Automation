@@ -9,6 +9,7 @@ ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  id=signInName
 ${ADMIN_PORTAL_CONTINUE_BUTTON}  xpath:/html//button[@id='continue']
 ${ADMIN_PORTAL_PASSWORD_FIELD}  xpath:/html//input[@id='password']
 ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}  xpath:/html//button[@id='next']
+${ADMIN_PORTAL_HEADER_TITLE}  xpath=//body/header[@class='Header']//h1[@class='Header-title']  
 #Different Admin credentials:
 ${SUBSCRIPTION_ADMIN_EMAIL}  qa_subscription_admin@test1.mapiq.net
 ${SUBSCRIPTION_ADMIN_PASSWORD}  QA-Subscr1pt1on-Adm1n
@@ -30,67 +31,55 @@ Verify Page Loaded
     Wait Until Element Contains    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}    Sign in
 Subscription Admin Logs in 
     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
-    #####################################Wait Until Element Contains    locator    text
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_CONTINUE_BUTTON}
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SUBSCRIPTION_ADMIN_EMAIL}
-    Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${SUBSCRIPTION_ADMIN_PASSWORD}
-    Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_HEADER_TITLE}
 Building Admin logs in
     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_CONTINUE_BUTTON}
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${BUILDING_ADMIN_EMAIL}
-    Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
-    Sleep  2
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${BUILDING_ADMIN_PASSWORD}
-    Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_HEADER_TITLE}
 Shift Admin logs in
     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_CONTINUE_BUTTON}
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SHIFT_ADMIN_EMAIL}
-    Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
-    Sleep  2
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${SHIFT_ADMIN_PASSWORD}
-    Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_HEADER_TITLE}
 Shift Assistant Admin logs in   
     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_CONTINUE_BUTTON}
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SHIFT_ASSISTANT_EMAIL}
-    Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
-    Sleep  2
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${SHIFT_ASSISTANT_PASSWORD}
-    Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_HEADER_TITLE}
 Shift Host Admin logs in
     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_CONTINUE_BUTTON}
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${SHIFT_HOST_EMAIL}
-    Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
-    Sleep  2
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${SHIFT_HOST_PASSWORD}
-    Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_HEADER_TITLE}
 Analytics Viewer Admin logs in
-     Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
-    Sleep  7
+    Click Button    ${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_CONTINUE_BUTTON}
     Input Text  ${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}  ${ANALYTICS_VIEWER_EMAIL}
-    Sleep  7
     Click Button  ${ADMIN_PORTAL_CONTINUE_BUTTON} 
-    Sleep  2
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}
     Input Text    ${ADMIN_PORTAL_PASSWORD_FIELD}    ${ANALYTICS_VIEWER_PASSWORD}
-    Sleep  2
     Click Button    ${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON} 
-    Sleep  7
+    Wait Until Element Is Visible    ${ADMIN_PORTAL_HEADER_TITLE}
