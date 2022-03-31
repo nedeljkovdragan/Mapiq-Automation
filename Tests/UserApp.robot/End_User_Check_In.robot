@@ -16,13 +16,14 @@ ${BROWSER} =  chrome
 ${URL} =  https://shifts-test.atlas.mapiq-universe.com/
 
 *** Test cases ***
-Book a shift as an End User for a current day    #Because the End User has to have a booked shift for a current day so he can check in
-End User checks in
-    Go to the Office Shifts Page
-    Log in to the Office Shifts Page
-    End user checks in for the current day
-End User sets status to "Not at the office" 
-    Go to the Office Shifts Page
-    Log in to the Office Shifts Page
-    End User sets the status to "Not at the office"
+#End User checks in
+    #Go to the Office Shifts Page
+    #Log in to the Office Shifts Page
+    #Book a shift for a current day, for the first building  #Because the End User has to have a booked shift for a current day so he can check in
+    #End user checks in for the current day
+#End User sets status to "Not at the office" 
+    #Go to the Office Shifts Page
+    #Log in to the Office Shifts Page
+    #End User sets the status to "Not at the office"
+    #Delete a shift for a current day               #Because future tests depend on non-booked shift for a current day
     

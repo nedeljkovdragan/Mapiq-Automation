@@ -71,8 +71,8 @@ Delete a current day shift
     Wait Until Element Is Visible  ${CURRENT_DAY}
     Element Should Be Visible    ${CURRENT_DAY}
 End User checks in for today  #For this one you need to have a booked shift for a current day
-    Wait Until Element Is Visible  ${STATUS_BUTTON}
-    Click Element    ${STATUS_BUTTON}
+    Wait Until Element Is Visible  ${I_AM_HERE_BUTTON} 
+    Click Element    ${I_AM_HERE_BUTTON} 
     Wait Until Element Is Visible  ${STATUS_BUTTON}
     Element Should Contain    ${STATUS_BUTTON}     At the office
 End User sets "Not at the Office status"
