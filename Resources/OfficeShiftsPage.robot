@@ -2,11 +2,6 @@
 Library  SeleniumLibrary
 Resource  ./PO/LandingOfficeShifts.robot 
 Resource  ./PO/OfficeShiftsYourShifts.robot
-Resource  ./PO/OfficeShiftsYourShifts.robot
-Resource  ./PO/OfficeShiftsYourShifts.robot
-Resource  ./PO/OfficeShiftsYourShifts.robot
-Resource  ./PO/OfficeShiftsYourShifts.robot
-Resource  ./PO/OfficeShiftsYourShifts.robot
 Resource  ./PO/OfficeShiftsYourProfile.robot
 *** Variables ***
 
