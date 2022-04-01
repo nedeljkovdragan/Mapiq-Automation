@@ -20,7 +20,7 @@ ${DEFAULT_OFFICE_DROPDOWN}  xpath=/html/body//page-content//div[@class='ProfileP
 ${CALENDAR_SYNCHRONIZATION}  xpath=/html/body//page-content//div[@class='ProfilePage']/section[3]//button[@class='ProfilePage-link']
 ${GET_HELP_IN_OUR_SUPPORT_CENTER}  css=[href='https\:\/\/support\.mapiq\.com\/support\/home']
 ${FAQ}  css=[href='https\:\/\/www\.mapiq\.com\/faq']
-${PRIVACY_POLICY}  xpath=//a[contains(text(),'Privacy Policy')]
+${PRIVACY_POLICY}  css=[href='https\:\/\/www\.mapiq\.com\/privacy-policy']
 ${EULA}  css=[href='https\:\/\/www\.mapiq\.com\/eula-office-shifts-app']
 
 #Locators from links out of the Office Shifts App:

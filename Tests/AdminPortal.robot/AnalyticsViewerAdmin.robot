@@ -8,8 +8,8 @@ Test Teardown  End Web Test
 
 
 *** Variables ***
-${BROWSER} =  chrome
-${URL} =  https://admin-test.mapiq-universe.com/#
+${browser} =  chrome
+${url} =  https://admin-test.mapiq-universe.com/#
 
 *** Test cases ***
 Login into the Admin Portal as a Analytics Viewer Admin   

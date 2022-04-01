@@ -22,7 +22,7 @@ FAQ link navigates a user to a right page
     Log in to the Office Shifts Page
     Click on the "Your Profile"
     FAQ link navigates a user to a right page
-#Privacy Policy link navigates a user to a right page                                Currently this test has an issue of App redirecting to Microsoft login page
+#Privacy Policy link navigates a user to a right page                               
     #Go to the Office Shifts Page
     #Log in to the Office Shifts Page
     #Click on the "Your Profile"
