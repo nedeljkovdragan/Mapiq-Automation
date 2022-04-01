@@ -1,1294 +1,1290 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.8.10 on win32)" generated="20220401 17:32:09.126" rpa="false" schemaversion="2">
-<suite id="s1" name="AdminPortal.robot" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot">
-<suite id="s1-s1" name="AnalyticsViewerAdmin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\AnalyticsViewerAdmin.robot">
-<test id="s1-s1-t1" name="Login into the Admin Portal as a Analytics Viewer Admin">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
+<robot generator="Robot 4.1.3 (Python 3.8.10 on win32)" generated="20220401 17:52:51.366" rpa="false" schemaversion="2">
+<suite id="s1" name="UserApp.robot" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\UserApp.robot">
+<suite id="s1-s1" name="About Mapiq Links" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\UserApp.robot\About_Mapiq_Links.robot">
+<test id="s1-s1-t1" name="Get help in our support center link navigates a user to a right page">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:32:09.405" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:32:09.404" endtime="20220401 17:32:10.926"/>
+<msg timestamp="20220401 17:52:51.697" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:52:51.696" endtime="20220401 17:52:53.247"/>
 </kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:52:53.248" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:52:53.247" endtime="20220401 17:52:54.540"/>
+</kw>
+<status status="PASS" starttime="20220401 17:52:51.695" endtime="20220401 17:52:54.540"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:32:10.928" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:32:10.926" endtime="20220401 17:32:13.835"/>
+<msg timestamp="20220401 17:52:54.541" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:52:54.541" endtime="20220401 17:52:54.658"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:32:13.835" endtime="20220401 17:32:13.972"/>
+<status status="PASS" starttime="20220401 17:52:54.541" endtime="20220401 17:52:54.658"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:09.404" endtime="20220401 17:32:13.972"/>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:52:54.658" endtime="20220401 17:52:54.681"/>
 </kw>
-<kw name="Analytics Viewer Admin Login" library="AdminPortalPage">
-<kw name="Analytics Viewer Admin logs in" library="LandingAdminPortal">
+<status status="PASS" starttime="20220401 17:52:54.658" endtime="20220401 17:52:54.681"/>
+</kw>
+<status status="PASS" starttime="20220401 17:52:54.541" endtime="20220401 17:52:54.681"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:13.973" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:32:13.973" endtime="20220401 17:32:14.030"/>
+<msg timestamp="20220401 17:52:54.683" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:52:54.682" endtime="20220401 17:52:54.737"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:14.030" endtime="20220401 17:32:15.650"/>
+<status status="PASS" starttime="20220401 17:52:54.738" endtime="20220401 17:52:56.162"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${ANALYTICS_VIEWER_EMAIL}</arg>
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:15.650" level="INFO">Typing text 'qa_analytics_viewer@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:32:15.650" endtime="20220401 17:32:15.792"/>
+<msg timestamp="20220401 17:52:56.163" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:52:56.162" endtime="20220401 17:52:56.309"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:15.793" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:32:15.792" endtime="20220401 17:32:16.246"/>
+<msg timestamp="20220401 17:52:56.309" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:52:56.309" endtime="20220401 17:52:57.284"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:16.246" endtime="20220401 17:32:16.487"/>
+<status status="PASS" starttime="20220401 17:52:57.285" endtime="20220401 17:52:57.530"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${ANALYTICS_VIEWER_PASSWORD}</arg>
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:16.487" level="INFO">Typing text 'QA-Analyt1cs-V1ewer' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:32:16.487" endtime="20220401 17:32:16.580"/>
+<msg timestamp="20220401 17:52:57.531" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:52:57.530" endtime="20220401 17:52:57.626"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:16.581" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:32:16.580" endtime="20220401 17:32:16.646"/>
+<msg timestamp="20220401 17:52:57.627" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:52:57.626" endtime="20220401 17:52:57.670"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:16.646" endtime="20220401 17:32:19.038"/>
+<status status="PASS" starttime="20220401 17:52:57.671" endtime="20220401 17:53:00.109"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:13.973" endtime="20220401 17:32:19.039"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:00.109" endtime="20220401 17:53:00.128"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:13.972" endtime="20220401 17:32:19.039"/>
+<status status="PASS" starttime="20220401 17:52:54.682" endtime="20220401 17:53:00.128"/>
+</kw>
+<status status="PASS" starttime="20220401 17:52:54.681" endtime="20220401 17:53:00.128"/>
+</kw>
+<kw name="Click on the &quot;Your Profile&quot;" library="OfficeShiftsPage">
+<kw name="&quot;Your Profile&quot; click" library="OfficeShiftsYourProfile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${YOUR_PROFILE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:00.129" endtime="20220401 17:53:02.212"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${YOUR_PROFILE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:02.212" level="INFO">Clicking button 'css=.Header-right [data-bind='click: showProfilePage']'.</msg>
+<status status="PASS" starttime="20220401 17:53:02.212" endtime="20220401 17:53:02.338"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220401 17:53:07.341" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220401 17:53:02.338" endtime="20220401 17:53:07.341"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:00.129" endtime="20220401 17:53:07.341"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:00.129" endtime="20220401 17:53:07.341"/>
+</kw>
+<kw name="Get help in our support center link works" library="OfficeShiftsPage">
+<kw name="Get help in our support center link navigation" library="OfficeShiftsYourProfile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:07.343" endtime="20220401 17:53:07.358"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${GET_HELP_IN_OUR_SUPPORT_CENTER}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:07.358" level="INFO">Clicking link 'css=[href='https://support.mapiq.com/support/home']'.</msg>
+<status status="PASS" starttime="20220401 17:53:07.358" endtime="20220401 17:53:07.433"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>new</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220401 17:53:07.433" endtime="20220401 17:53:07.440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SUPPORT_MAPIQ_PAGE_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:07.440" endtime="20220401 17:53:09.587"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:07.342" endtime="20220401 17:53:09.588"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:07.342" endtime="20220401 17:53:09.588"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:32:19.040" endtime="20220401 17:32:21.396"/>
+<status status="PASS" starttime="20220401 17:53:09.589" endtime="20220401 17:53:11.900"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:19.040" endtime="20220401 17:32:21.396"/>
+<status status="PASS" starttime="20220401 17:53:09.588" endtime="20220401 17:53:11.900"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:09.403" endtime="20220401 17:32:21.397"/>
+<status status="PASS" starttime="20220401 17:52:51.694" endtime="20220401 17:53:11.901"/>
 </test>
-<test id="s1-s1-t2" name="Analytics Viewer Admin can see only Analytics tab">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
+<test id="s1-s1-t2" name="FAQ link navigates a user to a right page">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:32:21.399" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:32:21.399" endtime="20220401 17:32:22.867"/>
+<msg timestamp="20220401 17:53:11.904" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:53:11.904" endtime="20220401 17:53:13.448"/>
 </kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:53:13.449" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:53:13.448" endtime="20220401 17:53:14.436"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:11.904" endtime="20220401 17:53:14.437"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:32:22.867" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:32:22.867" endtime="20220401 17:32:23.917"/>
+<msg timestamp="20220401 17:53:14.441" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:53:14.441" endtime="20220401 17:53:14.566"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:32:23.917" endtime="20220401 17:32:24.038"/>
+<status status="PASS" starttime="20220401 17:53:14.440" endtime="20220401 17:53:14.567"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:21.399" endtime="20220401 17:32:24.038"/>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:53:14.567" endtime="20220401 17:53:14.592"/>
 </kw>
-<kw name="Analytics Viewer Admin Login" library="AdminPortalPage">
-<kw name="Analytics Viewer Admin logs in" library="LandingAdminPortal">
+<status status="PASS" starttime="20220401 17:53:14.567" endtime="20220401 17:53:14.592"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:14.440" endtime="20220401 17:53:14.592"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:24.040" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:32:24.039" endtime="20220401 17:32:24.095"/>
+<msg timestamp="20220401 17:53:14.594" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:53:14.593" endtime="20220401 17:53:14.646"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:24.095" endtime="20220401 17:32:25.422"/>
+<status status="PASS" starttime="20220401 17:53:14.646" endtime="20220401 17:53:15.825"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${ANALYTICS_VIEWER_EMAIL}</arg>
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:25.423" level="INFO">Typing text 'qa_analytics_viewer@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:32:25.422" endtime="20220401 17:32:25.572"/>
+<msg timestamp="20220401 17:53:15.825" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:53:15.825" endtime="20220401 17:53:16.010"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:25.572" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:32:25.572" endtime="20220401 17:32:25.678"/>
+<msg timestamp="20220401 17:53:16.011" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:53:16.010" endtime="20220401 17:53:16.210"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:25.678" endtime="20220401 17:32:26.904"/>
+<status status="PASS" starttime="20220401 17:53:16.211" endtime="20220401 17:53:16.771"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${ANALYTICS_VIEWER_PASSWORD}</arg>
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:26.904" level="INFO">Typing text 'QA-Analyt1cs-V1ewer' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:32:26.904" endtime="20220401 17:32:27.010"/>
+<msg timestamp="20220401 17:53:16.772" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:53:16.771" endtime="20220401 17:53:16.879"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:27.011" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:32:27.011" endtime="20220401 17:32:27.058"/>
+<msg timestamp="20220401 17:53:16.880" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:53:16.879" endtime="20220401 17:53:16.928"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:27.058" endtime="20220401 17:32:29.426"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:24.039" endtime="20220401 17:32:29.426"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:24.039" endtime="20220401 17:32:29.426"/>
-</kw>
-<kw name="Analytics Viewer has Permissions to see only Analytics tab" library="AdminPortalPage">
-<kw name="Analytics Viewer see Analytics tab only" library="AdminPortalTabs">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${HOME_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:32:29.428" endtime="20220401 17:32:29.438"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${SHIFTS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:32:29.438" endtime="20220401 17:32:29.448"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${BUILDINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:32:29.448" endtime="20220401 17:32:29.457"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${PEOPLE_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:32:29.457" endtime="20220401 17:32:29.468"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${ACCESS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:32:29.468" endtime="20220401 17:32:29.476"/>
+<status status="PASS" starttime="20220401 17:53:16.928" endtime="20220401 17:53:18.920"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ANALYTICS_TAB_BUTTON}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:29.476" endtime="20220401 17:32:31.459"/>
+<status status="PASS" starttime="20220401 17:53:18.920" endtime="20220401 17:53:18.938"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${SETTINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:32:31.459" endtime="20220401 17:32:31.469"/>
+<status status="PASS" starttime="20220401 17:53:14.593" endtime="20220401 17:53:18.938"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:29.427" endtime="20220401 17:32:31.469"/>
+<status status="PASS" starttime="20220401 17:53:14.593" endtime="20220401 17:53:18.938"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:29.427" endtime="20220401 17:32:31.470"/>
+<kw name="Click on the &quot;Your Profile&quot;" library="OfficeShiftsPage">
+<kw name="&quot;Your Profile&quot; click" library="OfficeShiftsYourProfile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${YOUR_PROFILE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:18.939" endtime="20220401 17:53:21.685"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${YOUR_PROFILE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:21.686" level="INFO">Clicking button 'css=.Header-right [data-bind='click: showProfilePage']'.</msg>
+<status status="PASS" starttime="20220401 17:53:21.685" endtime="20220401 17:53:21.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220401 17:53:26.802" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220401 17:53:21.801" endtime="20220401 17:53:26.802"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:18.939" endtime="20220401 17:53:26.802"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:18.939" endtime="20220401 17:53:26.802"/>
+</kw>
+<kw name="FAQ link navigates a user to a right page" library="OfficeShiftsPage">
+<kw name="FAQ link navigation" library="OfficeShiftsYourProfile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:26.804" endtime="20220401 17:53:26.820"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${FAQ}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:26.821" level="INFO">Clicking link 'css=[href='https://www.mapiq.com/faq']'.</msg>
+<status status="PASS" starttime="20220401 17:53:26.821" endtime="20220401 17:53:26.891"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>new</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220401 17:53:26.891" endtime="20220401 17:53:26.897"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FAQ_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:26.897" endtime="20220401 17:53:29.909"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:26.804" endtime="20220401 17:53:29.910"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:26.803" endtime="20220401 17:53:29.910"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:32:31.471" endtime="20220401 17:32:33.819"/>
+<status status="PASS" starttime="20220401 17:53:29.911" endtime="20220401 17:53:32.134"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:31.470" endtime="20220401 17:32:33.819"/>
+<status status="PASS" starttime="20220401 17:53:29.910" endtime="20220401 17:53:32.134"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:21.398" endtime="20220401 17:32:33.820"/>
+<status status="PASS" starttime="20220401 17:53:11.903" endtime="20220401 17:53:32.135"/>
 </test>
-<doc>Tests for a Shift Assistans Admin
-To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/AnalyticsViewerAdmin.robot" in the Terminal</doc>
-<status status="PASS" starttime="20220401 17:32:09.154" endtime="20220401 17:32:33.822"/>
+<test id="s1-s1-t3" name="EULA link navigates a user to a right page">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220401 17:53:32.138" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:53:32.137" endtime="20220401 17:53:33.562"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:53:33.563" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:53:33.563" endtime="20220401 17:53:34.601"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:32.136" endtime="20220401 17:53:34.601"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:53:34.602" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:53:34.602" endtime="20220401 17:53:34.720"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:34.602" endtime="20220401 17:53:34.720"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:53:34.721" endtime="20220401 17:53:34.748"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:34.720" endtime="20220401 17:53:34.748"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:34.601" endtime="20220401 17:53:34.748"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:34.750" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:53:34.750" endtime="20220401 17:53:34.806"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:34.806" endtime="20220401 17:53:36.035"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:36.035" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:53:36.035" endtime="20220401 17:53:36.186"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:36.187" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:53:36.187" endtime="20220401 17:53:37.245"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:37.246" endtime="20220401 17:53:37.482"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:37.482" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:53:37.482" endtime="20220401 17:53:37.567"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:37.568" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:53:37.568" endtime="20220401 17:53:37.614"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:37.614" endtime="20220401 17:53:39.650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:39.650" endtime="20220401 17:53:39.667"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:34.749" endtime="20220401 17:53:39.667"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:34.749" endtime="20220401 17:53:39.667"/>
+</kw>
+<kw name="Click on the &quot;Your Profile&quot;" library="OfficeShiftsPage">
+<kw name="&quot;Your Profile&quot; click" library="OfficeShiftsYourProfile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${YOUR_PROFILE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:39.668" endtime="20220401 17:53:42.010"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${YOUR_PROFILE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:42.011" level="INFO">Clicking button 'css=.Header-right [data-bind='click: showProfilePage']'.</msg>
+<status status="PASS" starttime="20220401 17:53:42.010" endtime="20220401 17:53:42.123"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220401 17:53:47.127" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220401 17:53:42.123" endtime="20220401 17:53:47.127"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:39.668" endtime="20220401 17:53:47.127"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:39.668" endtime="20220401 17:53:47.127"/>
+</kw>
+<kw name="EULA link navigates a user to a right page" library="OfficeShiftsPage">
+<kw name="EULA navigation" library="OfficeShiftsYourProfile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:47.129" endtime="20220401 17:53:47.146"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${EULA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220401 17:53:47.146" level="INFO">Clicking link 'css=[href='https://www.mapiq.com/eula-office-shifts-app']'.</msg>
+<status status="PASS" starttime="20220401 17:53:47.146" endtime="20220401 17:53:47.240"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>new</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220401 17:53:47.241" endtime="20220401 17:53:47.263"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EULA_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:47.263" endtime="20220401 17:53:48.589"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:47.128" endtime="20220401 17:53:48.590"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:47.128" endtime="20220401 17:53:48.590"/>
+</kw>
+<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220401 17:53:48.591" endtime="20220401 17:53:50.795"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:48.590" endtime="20220401 17:53:50.795"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:32.136" endtime="20220401 17:53:50.796"/>
+</test>
+<doc>Login to Office Shifts Test
+To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/About_Mapiq_Links.robot" in the Terminal</doc>
+<status status="PASS" starttime="20220401 17:52:51.397" endtime="20220401 17:53:50.797"/>
 </suite>
-<suite id="s1-s2" name="BuildingAdmin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\BuildingAdmin.robot">
-<test id="s1-s2-t1" name="Login into the Admin Portal as a Building Admin">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
+<suite id="s1-s2" name="End User Login" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\UserApp.robot\End_User_Login.robot">
+<test id="s1-s2-t1" name="Login into the Office Shifts">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:32:33.838" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:32:33.838" endtime="20220401 17:32:35.472"/>
+<msg timestamp="20220401 17:53:50.817" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:53:50.817" endtime="20220401 17:53:52.249"/>
 </kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:53:52.249" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:53:52.249" endtime="20220401 17:53:53.166"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:50.816" endtime="20220401 17:53:53.166"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:32:35.472" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:32:35.472" endtime="20220401 17:32:36.785"/>
+<msg timestamp="20220401 17:53:53.169" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:53:53.169" endtime="20220401 17:53:53.300"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:32:36.785" endtime="20220401 17:32:36.915"/>
+<status status="PASS" starttime="20220401 17:53:53.168" endtime="20220401 17:53:53.300"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:33.837" endtime="20220401 17:32:36.915"/>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:53:53.300" endtime="20220401 17:53:53.324"/>
 </kw>
-<kw name="Building Admin Login" library="AdminPortalPage">
-<kw name="Building Admin logs in" library="LandingAdminPortal">
+<status status="PASS" starttime="20220401 17:53:53.300" endtime="20220401 17:53:53.324"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:53.168" endtime="20220401 17:53:53.324"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:36.917" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:32:36.916" endtime="20220401 17:32:36.972"/>
+<msg timestamp="20220401 17:53:53.326" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:53:53.325" endtime="20220401 17:53:53.380"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:36.973" endtime="20220401 17:32:38.227"/>
+<status status="PASS" starttime="20220401 17:53:53.380" endtime="20220401 17:53:54.506"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${BUILDING_ADMIN_EMAIL}</arg>
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:38.228" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:32:38.227" endtime="20220401 17:32:38.436"/>
+<msg timestamp="20220401 17:53:54.506" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:53:54.506" endtime="20220401 17:53:54.674"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:38.436" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:32:38.436" endtime="20220401 17:32:38.558"/>
+<msg timestamp="20220401 17:53:54.675" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:53:54.675" endtime="20220401 17:53:55.135"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:38.558" endtime="20220401 17:32:39.147"/>
+<status status="PASS" starttime="20220401 17:53:55.135" endtime="20220401 17:53:55.373"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${BUILDING_ADMIN_PASSWORD}</arg>
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:39.148" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:32:39.147" endtime="20220401 17:32:39.254"/>
+<msg timestamp="20220401 17:53:55.373" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:53:55.373" endtime="20220401 17:53:55.466"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:39.256" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:32:39.254" endtime="20220401 17:32:39.305"/>
+<msg timestamp="20220401 17:53:55.466" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:53:55.466" endtime="20220401 17:53:55.514"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:39.305" endtime="20220401 17:32:41.572"/>
+<status status="PASS" starttime="20220401 17:53:55.515" endtime="20220401 17:53:57.861"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:36.916" endtime="20220401 17:32:41.572"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:53:57.861" endtime="20220401 17:53:57.878"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:36.916" endtime="20220401 17:32:41.572"/>
+<status status="PASS" starttime="20220401 17:53:53.325" endtime="20220401 17:53:57.879"/>
+</kw>
+<status status="PASS" starttime="20220401 17:53:53.324" endtime="20220401 17:53:57.879"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:32:41.574" endtime="20220401 17:32:43.947"/>
+<status status="PASS" starttime="20220401 17:53:57.881" endtime="20220401 17:54:00.073"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:41.573" endtime="20220401 17:32:43.947"/>
+<status status="PASS" starttime="20220401 17:53:57.880" endtime="20220401 17:54:00.073"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:33.836" endtime="20220401 17:32:43.948"/>
+<status status="PASS" starttime="20220401 17:53:50.816" endtime="20220401 17:54:00.074"/>
 </test>
-<test id="s1-s2-t2" name="Building Admin Permissions">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:32:43.951" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:32:43.950" endtime="20220401 17:32:45.374"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:32:45.375" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:32:45.374" endtime="20220401 17:32:46.636"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:32:46.636" endtime="20220401 17:32:46.774"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:43.950" endtime="20220401 17:32:46.774"/>
-</kw>
-<kw name="Building Admin Login" library="AdminPortalPage">
-<kw name="Building Admin logs in" library="LandingAdminPortal">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:46.775" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:32:46.775" endtime="20220401 17:32:46.830"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:46.830" endtime="20220401 17:32:48.131"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${BUILDING_ADMIN_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:48.132" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:32:48.131" endtime="20220401 17:32:48.309"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:48.310" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:32:48.309" endtime="20220401 17:32:48.475"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:48.475" endtime="20220401 17:32:49.001"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${BUILDING_ADMIN_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:49.001" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:32:49.001" endtime="20220401 17:32:49.106"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:32:49.106" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:32:49.106" endtime="20220401 17:32:49.155"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:49.156" endtime="20220401 17:32:51.442"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:46.775" endtime="20220401 17:32:51.442"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:46.775" endtime="20220401 17:32:51.442"/>
-</kw>
-<kw name="Building Admin has Permissions to see all tabs" library="AdminPortalPage">
-<kw name="Building Admin can see all tabs" library="AdminPortalTabs">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${HOME_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:51.444" endtime="20220401 17:32:54.944"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SHIFTS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:54.945" endtime="20220401 17:32:54.964"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BUILDINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:54.964" endtime="20220401 17:32:54.983"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PEOPLE_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:54.983" endtime="20220401 17:32:55.000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ACCESS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:55.000" endtime="20220401 17:32:55.018"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ANALYTICS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:55.018" endtime="20220401 17:32:55.034"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SETTINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:32:55.035" endtime="20220401 17:32:55.051"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:51.443" endtime="20220401 17:32:55.051"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:51.443" endtime="20220401 17:32:55.051"/>
-</kw>
-<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:32:55.052" endtime="20220401 17:32:58.445"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:55.051" endtime="20220401 17:32:58.445"/>
-</kw>
-<status status="PASS" starttime="20220401 17:32:43.949" endtime="20220401 17:32:58.445"/>
-</test>
-<doc>Tests for a Building Admin
-To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/BuildingAdmin.robot" in the Terminal</doc>
-<status status="PASS" starttime="20220401 17:32:33.824" endtime="20220401 17:32:58.447"/>
+<doc>Login to Office Shifts Test
+To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/End_User_Logout.robot" in the Terminal</doc>
+<status status="PASS" starttime="20220401 17:53:50.800" endtime="20220401 17:54:00.076"/>
 </suite>
-<suite id="s1-s3" name="ShiftAdmin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\ShiftAdmin.robot">
-<test id="s1-s3-t1" name="Login into the Admin Portal as a Shift Admin">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
+<suite id="s1-s3" name="End User Logout" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\UserApp.robot\End_User_Logout.robot">
+<test id="s1-s3-t1" name="User logs of the Office Shifts">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:32:58.463" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:32:58.462" endtime="20220401 17:32:59.952"/>
+<msg timestamp="20220401 17:54:00.094" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:54:00.094" endtime="20220401 17:54:01.504"/>
 </kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:54:01.504" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:01.504" endtime="20220401 17:54:02.697"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:00.094" endtime="20220401 17:54:02.697"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:32:59.953" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:32:59.953" endtime="20220401 17:33:03.174"/>
+<msg timestamp="20220401 17:54:02.699" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:02.699" endtime="20220401 17:54:02.823"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:33:03.174" endtime="20220401 17:33:03.300"/>
+<status status="PASS" starttime="20220401 17:54:02.698" endtime="20220401 17:54:02.823"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:58.461" endtime="20220401 17:33:03.301"/>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:54:02.824" endtime="20220401 17:54:02.847"/>
 </kw>
-<kw name="Shift Admin Login" library="AdminPortalPage">
-<kw name="Shift Admin logs in" library="LandingAdminPortal">
+<status status="PASS" starttime="20220401 17:54:02.824" endtime="20220401 17:54:02.848"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:02.698" endtime="20220401 17:54:02.848"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:03.302" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:33:03.302" endtime="20220401 17:33:03.357"/>
+<msg timestamp="20220401 17:54:02.849" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:54:02.849" endtime="20220401 17:54:02.906"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:03.357" endtime="20220401 17:33:04.636"/>
+<status status="PASS" starttime="20220401 17:54:02.906" endtime="20220401 17:54:04.516"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SHIFT_ADMIN_EMAIL}</arg>
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:04.637" level="INFO">Typing text 'qa_shift_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:33:04.637" endtime="20220401 17:33:04.807"/>
+<msg timestamp="20220401 17:54:04.517" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:54:04.516" endtime="20220401 17:54:04.677"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:04.807" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:33:04.807" endtime="20220401 17:33:04.963"/>
+<msg timestamp="20220401 17:54:04.678" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:54:04.677" endtime="20220401 17:54:05.098"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:04.964" endtime="20220401 17:33:05.542"/>
+<status status="PASS" starttime="20220401 17:54:05.098" endtime="20220401 17:54:05.336"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SHIFT_ADMIN_PASSWORD}</arg>
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:05.543" level="INFO">Typing text 'QA-Sh1ft-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:33:05.543" endtime="20220401 17:33:05.642"/>
+<msg timestamp="20220401 17:54:05.338" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:54:05.337" endtime="20220401 17:54:05.483"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:05.643" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:33:05.643" endtime="20220401 17:33:05.694"/>
+<msg timestamp="20220401 17:54:05.484" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:54:05.483" endtime="20220401 17:54:05.543"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:05.695" endtime="20220401 17:33:07.937"/>
+<status status="PASS" starttime="20220401 17:54:05.543" endtime="20220401 17:54:07.910"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:03.302" endtime="20220401 17:33:07.938"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:07.910" endtime="20220401 17:54:07.927"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:03.301" endtime="20220401 17:33:07.938"/>
+<status status="PASS" starttime="20220401 17:54:02.848" endtime="20220401 17:54:07.928"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:02.848" endtime="20220401 17:54:07.928"/>
+</kw>
+<kw name="Logout of the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Sign Out of the Office Shifts" library="OfficeShiftsYourProfile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:07.929" endtime="20220401 17:54:07.943"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220401 17:54:12.953" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220401 17:54:07.944" endtime="20220401 17:54:12.953"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${YOUR_PROFILE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:12.953" level="INFO">Clicking element 'css=.Header-right [data-bind='click: showProfilePage']'.</msg>
+<status status="PASS" starttime="20220401 17:54:12.953" endtime="20220401 17:54:13.044"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_OUT_BUTTON_OFFICE_SHIFTS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:13.045" level="INFO">Clicking element 'css=.ProfilePage section:nth-child(2) button'.</msg>
+<status status="PASS" starttime="20220401 17:54:13.045" endtime="20220401 17:54:13.086"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:13.087" endtime="20220401 17:54:13.748"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:07.928" endtime="20220401 17:54:13.748"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:07.928" endtime="20220401 17:54:13.748"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:33:07.939" endtime="20220401 17:33:10.261"/>
+<status status="PASS" starttime="20220401 17:54:13.750" endtime="20220401 17:54:15.954"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:07.939" endtime="20220401 17:33:10.261"/>
+<status status="PASS" starttime="20220401 17:54:13.749" endtime="20220401 17:54:15.954"/>
 </kw>
-<status status="PASS" starttime="20220401 17:32:58.461" endtime="20220401 17:33:10.262"/>
+<status status="PASS" starttime="20220401 17:54:00.093" endtime="20220401 17:54:15.955"/>
 </test>
-<test id="s1-s3-t2" name="Shift Admin Permissions">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:33:10.264" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:33:10.264" endtime="20220401 17:33:11.651"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:33:11.652" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:33:11.651" endtime="20220401 17:33:14.834"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:33:14.834" endtime="20220401 17:33:14.962"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:10.264" endtime="20220401 17:33:14.962"/>
-</kw>
-<kw name="Shift Admin Login" library="AdminPortalPage">
-<kw name="Shift Admin logs in" library="LandingAdminPortal">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:14.963" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:33:14.963" endtime="20220401 17:33:15.017"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:15.017" endtime="20220401 17:33:17.122"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SHIFT_ADMIN_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:17.124" level="INFO">Typing text 'qa_shift_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:33:17.123" endtime="20220401 17:33:17.274"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:17.275" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:33:17.274" endtime="20220401 17:33:17.332"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:17.333" endtime="20220401 17:33:18.182"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SHIFT_ADMIN_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:18.183" level="INFO">Typing text 'QA-Sh1ft-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:33:18.182" endtime="20220401 17:33:18.284"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:18.284" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:33:18.284" endtime="20220401 17:33:18.336"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:18.336" endtime="20220401 17:33:20.759"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:14.963" endtime="20220401 17:33:20.759"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:14.962" endtime="20220401 17:33:20.759"/>
-</kw>
-<kw name="Shift Admin has Permissions to see Home, Shifts, People, Access, Analytics, and Settings tabs but not Buildings tab" library="AdminPortalPage">
-<kw name="Shift Admin can see Home, Shifts, People, Access, Analytics, and Settings tabs, but not Buildings tab" library="AdminPortalTabs">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${HOME_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:20.761" endtime="20220401 17:33:23.608"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SHIFTS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:23.608" endtime="20220401 17:33:23.630"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${BUILDINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:33:23.631" endtime="20220401 17:33:23.640"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PEOPLE_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:23.640" endtime="20220401 17:33:23.658"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ACCESS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:23.658" endtime="20220401 17:33:23.677"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ANALYTICS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:23.678" endtime="20220401 17:33:23.703"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SETTINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:23.703" endtime="20220401 17:33:23.721"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:20.760" endtime="20220401 17:33:23.722"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:20.760" endtime="20220401 17:33:23.722"/>
-</kw>
-<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:33:23.723" endtime="20220401 17:33:27.645"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:23.722" endtime="20220401 17:33:27.645"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:10.263" endtime="20220401 17:33:27.646"/>
-</test>
-<doc>Tests for a Shift Admin
-To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/ShiftAdmin.robot" in the Terminal</doc>
-<status status="PASS" starttime="20220401 17:32:58.449" endtime="20220401 17:33:27.648"/>
+<doc>Logout of the Office Shifts Test
+To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/End_User_Logout.robot" in the Terminal</doc>
+<status status="PASS" starttime="20220401 17:54:00.078" endtime="20220401 17:54:15.957"/>
 </suite>
-<suite id="s1-s4" name="ShiftAssistantAdmin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\ShiftAssistantAdmin.robot">
-<test id="s1-s4-t1" name="Login into the Admin Portal as a Shift Assistant Admin">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
+<suite id="s1-s4" name="Shift Booking End User" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\UserApp.robot\Shift_Booking_End_User.robot">
+<test id="s1-s4-t1" name="Book a shift as an End User for a current day">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:33:27.664" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:33:27.663" endtime="20220401 17:33:29.247"/>
+<msg timestamp="20220401 17:54:15.976" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:54:15.976" endtime="20220401 17:54:17.331"/>
 </kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:54:17.331" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:17.331" endtime="20220401 17:54:19.128"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:15.976" endtime="20220401 17:54:19.128"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:33:29.248" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:33:29.248" endtime="20220401 17:33:30.831"/>
+<msg timestamp="20220401 17:54:19.132" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:19.131" endtime="20220401 17:54:19.255"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:33:30.831" endtime="20220401 17:33:30.962"/>
+<status status="PASS" starttime="20220401 17:54:19.131" endtime="20220401 17:54:19.255"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:27.663" endtime="20220401 17:33:30.962"/>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:54:19.256" endtime="20220401 17:54:19.278"/>
 </kw>
-<kw name="Shift Assistant Admin Login" library="AdminPortalPage">
-<kw name="Shift Assistant Admin logs in" library="LandingAdminPortal">
+<status status="PASS" starttime="20220401 17:54:19.256" endtime="20220401 17:54:19.278"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:19.129" endtime="20220401 17:54:19.278"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:30.963" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:33:30.963" endtime="20220401 17:33:31.016"/>
+<msg timestamp="20220401 17:54:19.280" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:54:19.279" endtime="20220401 17:54:19.342"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:31.016" endtime="20220401 17:33:33.407"/>
+<status status="PASS" starttime="20220401 17:54:19.342" endtime="20220401 17:54:21.425"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SHIFT_ASSISTANT_EMAIL}</arg>
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:33.407" level="INFO">Typing text 'qa_shift_assistant@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:33:33.407" endtime="20220401 17:33:33.555"/>
+<msg timestamp="20220401 17:54:21.426" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:54:21.425" endtime="20220401 17:54:21.563"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:33.555" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:33:33.555" endtime="20220401 17:33:33.612"/>
+<msg timestamp="20220401 17:54:21.563" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:54:21.563" endtime="20220401 17:54:21.616"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:33.613" endtime="20220401 17:33:34.391"/>
+<status status="PASS" starttime="20220401 17:54:21.617" endtime="20220401 17:54:23.616"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SHIFT_ASSISTANT_PASSWORD}</arg>
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:34.392" level="INFO">Typing text 'QA-Sh1ft-Ass1stant' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:33:34.391" endtime="20220401 17:33:34.505"/>
+<msg timestamp="20220401 17:54:23.617" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:54:23.617" endtime="20220401 17:54:23.734"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:34.505" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:33:34.505" endtime="20220401 17:33:34.553"/>
+<msg timestamp="20220401 17:54:23.735" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:54:23.734" endtime="20220401 17:54:23.784"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:34.553" endtime="20220401 17:33:36.788"/>
+<status status="PASS" starttime="20220401 17:54:23.784" endtime="20220401 17:54:25.931"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:30.963" endtime="20220401 17:33:36.788"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:25.931" endtime="20220401 17:54:25.948"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:30.963" endtime="20220401 17:33:36.789"/>
+<status status="PASS" starttime="20220401 17:54:19.279" endtime="20220401 17:54:25.948"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:19.279" endtime="20220401 17:54:25.948"/>
+</kw>
+<kw name="Book a shift for a current day, for the first building" library="OfficeShiftsPage">
+<kw name="Booking a shift for a current day, first building" library="OfficeShiftsYourShifts">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CURRENT_DAY}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:25.950" endtime="20220401 17:54:27.881"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CURRENT_DAY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:27.881" level="INFO">Clicking element 'css=.is-today'.</msg>
+<status status="PASS" starttime="20220401 17:54:27.881" endtime="20220401 17:54:27.952"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DAY_OVERVIEW_BOOK_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:27.952" endtime="20220401 17:54:28.213"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DAY_OVERVIEW_BOOK_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:28.213" level="INFO">Clicking element 'css=.DayOverview-bookButton'.</msg>
+<status status="PASS" starttime="20220401 17:54:28.213" endtime="20220401 17:54:28.279"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SHOW_ALL_WORKSPACES_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:28.279" endtime="20220401 17:54:28.307"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SHOW_ALL_WORKSPACES_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:28.308" level="INFO">Clicking element 'xpath=/html/body//popup-manager//div[@class='Card-scrollHeight']//rw-home//div[@class='RegistrationWizard-tile']'.</msg>
+<status status="PASS" starttime="20220401 17:54:28.308" endtime="20220401 17:54:28.652"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIRST_BUILDING}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:28.652" endtime="20220401 17:54:28.675"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FIRST_BUILDING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:28.675" level="INFO">Clicking element 'css=.LocationPicker-option:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220401 17:54:28.675" endtime="20220401 17:54:28.724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIRST_FLOOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:28.724" endtime="20220401 17:54:28.744"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FIRST_FLOOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:28.745" level="INFO">Clicking element 'css=.LocationPicker-group:nth-child(4) &gt; .LocationPicker-option:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220401 17:54:28.744" endtime="20220401 17:54:28.784"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIRST_AREA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:28.784" endtime="20220401 17:54:28.803"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FIRST_AREA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:28.804" level="INFO">Clicking element 'css=.LocationPicker-group:nth-child(6) &gt; .LocationPicker-option:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220401 17:54:28.804" endtime="20220401 17:54:28.854"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CONFIRM_BOOKING_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:28.854" endtime="20220401 17:54:28.871"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONFIRM_BOOKING_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:28.872" level="INFO">Clicking element 'xpath=//span[contains(.,'Confirm booking')]'.</msg>
+<status status="PASS" starttime="20220401 17:54:28.872" endtime="20220401 17:54:28.905"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220401 17:54:29.921" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220401 17:54:28.906" endtime="20220401 17:54:29.921"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${STATUS_MESSAGE}</arg>
+<arg>You’re good to go to the office</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220401 17:54:29.942" level="INFO">Element 'xpath=/html/body//status-message[@class='Card']//div[@class='status-message']' contains text 'You’re good to go to the office'.</msg>
+<status status="PASS" starttime="20220401 17:54:29.921" endtime="20220401 17:54:29.942"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:25.949" endtime="20220401 17:54:29.943"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:25.949" endtime="20220401 17:54:29.943"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:33:36.789" endtime="20220401 17:33:39.129"/>
+<status status="PASS" starttime="20220401 17:54:29.944" endtime="20220401 17:54:32.896"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:36.789" endtime="20220401 17:33:39.129"/>
+<status status="PASS" starttime="20220401 17:54:29.943" endtime="20220401 17:54:32.896"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:27.662" endtime="20220401 17:33:39.130"/>
+<status status="PASS" starttime="20220401 17:54:15.975" endtime="20220401 17:54:32.897"/>
 </test>
-<test id="s1-s4-t2" name="Shift Assistant Admin Permissions">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
+<test id="s1-s4-t2" name="Edit a shift as an End User for a current day">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:33:39.133" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:33:39.133" endtime="20220401 17:33:40.643"/>
+<msg timestamp="20220401 17:54:32.900" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:54:32.899" endtime="20220401 17:54:34.347"/>
 </kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:54:34.347" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:34.347" endtime="20220401 17:54:36.412"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:32.899" endtime="20220401 17:54:36.413"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:33:40.643" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:33:40.643" endtime="20220401 17:33:42.429"/>
+<msg timestamp="20220401 17:54:36.414" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:36.414" endtime="20220401 17:54:36.661"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:33:42.429" endtime="20220401 17:33:42.556"/>
+<status status="PASS" starttime="20220401 17:54:36.414" endtime="20220401 17:54:36.661"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:39.132" endtime="20220401 17:33:42.556"/>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:54:36.662" endtime="20220401 17:54:36.689"/>
 </kw>
-<kw name="Shift Assistant Admin Login" library="AdminPortalPage">
-<kw name="Shift Assistant Admin logs in" library="LandingAdminPortal">
+<status status="PASS" starttime="20220401 17:54:36.662" endtime="20220401 17:54:36.689"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:36.413" endtime="20220401 17:54:36.689"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:42.558" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:33:42.557" endtime="20220401 17:33:42.610"/>
+<msg timestamp="20220401 17:54:36.690" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:54:36.690" endtime="20220401 17:54:36.747"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:42.610" endtime="20220401 17:33:44.078"/>
+<status status="PASS" starttime="20220401 17:54:36.747" endtime="20220401 17:54:38.547"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SHIFT_ASSISTANT_EMAIL}</arg>
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:44.079" level="INFO">Typing text 'qa_shift_assistant@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:33:44.078" endtime="20220401 17:33:44.275"/>
+<msg timestamp="20220401 17:54:38.547" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:54:38.547" endtime="20220401 17:54:38.684"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
+<arg>${CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:44.276" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:33:44.275" endtime="20220401 17:33:44.441"/>
+<msg timestamp="20220401 17:54:38.685" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:54:38.685" endtime="20220401 17:54:38.743"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:44.441" endtime="20220401 17:33:44.993"/>
+<status status="PASS" starttime="20220401 17:54:38.744" endtime="20220401 17:54:39.283"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SHIFT_ASSISTANT_PASSWORD}</arg>
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:44.993" level="INFO">Typing text 'QA-Sh1ft-Ass1stant' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:33:44.993" endtime="20220401 17:33:45.099"/>
+<msg timestamp="20220401 17:54:39.284" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:54:39.284" endtime="20220401 17:54:39.386"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:45.099" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:33:45.099" endtime="20220401 17:33:45.147"/>
+<msg timestamp="20220401 17:54:39.386" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:54:39.386" endtime="20220401 17:54:39.435"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:45.147" endtime="20220401 17:33:47.626"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:42.557" endtime="20220401 17:33:47.627"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:42.557" endtime="20220401 17:33:47.627"/>
-</kw>
-<kw name="Shift Assistant Admin has Permissions to see Home, Shifts, People, and Settings tabs but not Buildings, Access, and Analytics tab" library="AdminPortalPage">
-<kw name="Shift Assistant Admin see Home, Shifts, People, and Settings tabs but not Buildings, Access, and Analytics tab" library="AdminPortalTabs">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${HOME_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:47.628" endtime="20220401 17:33:49.381"/>
+<status status="PASS" starttime="20220401 17:54:39.435" endtime="20220401 17:54:41.470"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SHIFTS_TAB_BUTTON}</arg>
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:49.382" endtime="20220401 17:33:49.400"/>
+<status status="PASS" starttime="20220401 17:54:41.471" endtime="20220401 17:54:41.487"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${BUILDINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:33:49.400" endtime="20220401 17:33:49.410"/>
+<status status="PASS" starttime="20220401 17:54:36.690" endtime="20220401 17:54:41.488"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:36.690" endtime="20220401 17:54:41.488"/>
+</kw>
+<kw name="Edit a shift for a current day" library="OfficeShiftsPage">
+<kw name="Edit a current day shift" library="OfficeShiftsYourShifts">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOOKED_SHIFT_CHECKMARK_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:41.490" endtime="20220401 17:54:43.261"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOOKED_SHIFT_CHECKMARK_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:43.261" level="INFO">Clicking element 'css=.is-today svg'.</msg>
+<status status="PASS" starttime="20220401 17:54:43.261" endtime="20220401 17:54:43.338"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PEOPLE_TAB_BUTTON}</arg>
+<arg>${EDIT_SHIFT_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:49.410" endtime="20220401 17:33:49.429"/>
+<status status="PASS" starttime="20220401 17:54:43.338" endtime="20220401 17:54:43.363"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${ACCESS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:33:49.429" endtime="20220401 17:33:49.438"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${ANALYTICS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:33:49.438" endtime="20220401 17:33:49.447"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EDIT_SHIFT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:43.364" level="INFO">Clicking element 'xpath=/html/body//popup-manager/div[@class='ModalWrapper ModalWrapper--popupManager']//div[@class='Card-scrollHeight']/rw-booked-shift-summary//button[@class='MpqLinkButton Summary-editBtn']'.</msg>
+<status status="PASS" starttime="20220401 17:54:43.364" endtime="20220401 17:54:43.429"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SETTINGS_TAB_BUTTON}</arg>
+<arg>${SHOW_ALL_WORKSPACES_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:49.447" endtime="20220401 17:33:49.466"/>
+<status status="PASS" starttime="20220401 17:54:43.429" endtime="20220401 17:54:43.454"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:47.628" endtime="20220401 17:33:49.466"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SHOW_ALL_WORKSPACES_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:43.454" level="INFO">Clicking element 'xpath=/html/body//popup-manager//div[@class='Card-scrollHeight']//rw-home//div[@class='RegistrationWizard-tile']'.</msg>
+<status status="PASS" starttime="20220401 17:54:43.454" endtime="20220401 17:54:43.544"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:47.628" endtime="20220401 17:33:49.466"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SECOND_BUILDING}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:43.544" endtime="20220401 17:54:43.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SECOND_BUILDING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:43.567" level="INFO">Clicking element 'css=.LocationPicker-option:nth-child(2)'.</msg>
+<status status="PASS" starttime="20220401 17:54:43.567" endtime="20220401 17:54:43.610"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIRST_FLOOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:43.610" endtime="20220401 17:54:43.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FIRST_FLOOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:43.632" level="INFO">Clicking element 'css=.LocationPicker-group:nth-child(4) &gt; .LocationPicker-option:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220401 17:54:43.631" endtime="20220401 17:54:43.672"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MODIFY_BOOKING_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:43.672" endtime="20220401 17:54:43.689"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MODIFY_BOOKING_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:43.690" level="INFO">Clicking element 'xpath=//span[contains(.,'Modify booking')]'.</msg>
+<status status="PASS" starttime="20220401 17:54:43.690" endtime="20220401 17:54:43.722"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220401 17:54:44.726" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220401 17:54:43.722" endtime="20220401 17:54:44.726"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${STATUS_MESSAGE}</arg>
+<arg>Location successfully updated</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220401 17:54:44.749" level="INFO">Element 'xpath=/html/body//status-message[@class='Card']//div[@class='status-message']' contains text 'Location successfully updated'.</msg>
+<status status="PASS" starttime="20220401 17:54:44.727" endtime="20220401 17:54:44.750"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:41.489" endtime="20220401 17:54:44.750"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:41.488" endtime="20220401 17:54:44.750"/>
 </kw>
 <kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:33:49.468" endtime="20220401 17:33:51.830"/>
+<status status="PASS" starttime="20220401 17:54:44.751" endtime="20220401 17:54:46.957"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:49.467" endtime="20220401 17:33:51.830"/>
+<status status="PASS" starttime="20220401 17:54:44.751" endtime="20220401 17:54:46.957"/>
 </kw>
-<status status="PASS" starttime="20220401 17:33:39.132" endtime="20220401 17:33:51.831"/>
+<status status="PASS" starttime="20220401 17:54:32.898" endtime="20220401 17:54:46.958"/>
 </test>
-<doc>Tests for a Shift Assistans Admin
-To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/ShiftAssistantAdmin.robot" in the Terminal</doc>
-<status status="PASS" starttime="20220401 17:33:27.650" endtime="20220401 17:33:51.832"/>
+<test id="s1-s4-t3" name="Delete a shift for a current day">
+<kw name="Begin Web Test Office Shifts" library="SetupTeardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220401 17:54:46.961" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220401 17:54:46.960" endtime="20220401 17:54:48.375"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_OFFICE_SHIFTS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:54:48.375" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:48.375" endtime="20220401 17:54:49.868"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:46.960" endtime="20220401 17:54:49.868"/>
+</kw>
+<kw name="Go to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Navigate To" library="LandingOfficeShifts">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220401 17:54:49.870" level="INFO">Opening url 'https://shifts-test.atlas.mapiq-universe.com/'</msg>
+<status status="PASS" starttime="20220401 17:54:49.869" endtime="20220401 17:54:50.010"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:49.869" endtime="20220401 17:54:50.010"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingOfficeShifts">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<arg>Sign in</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220401 17:54:50.011" endtime="20220401 17:54:50.037"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:50.010" endtime="20220401 17:54:50.037"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:49.869" endtime="20220401 17:54:50.037"/>
+</kw>
+<kw name="Log in to the Office Shifts Page" library="OfficeShiftsPage">
+<kw name="Log in" library="LandingOfficeShifts">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${OS_FIRST_SIGN_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:50.038" level="INFO">Clicking button 'xpath:/html//log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
+<status status="PASS" starttime="20220401 17:54:50.038" endtime="20220401 17:54:50.094"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:50.094" endtime="20220401 17:54:51.300"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${OS_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${EMAIL_ANALYTICS_VIEWER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:51.300" level="INFO">Typing text 'qa_building_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
+<status status="PASS" starttime="20220401 17:54:51.300" endtime="20220401 17:54:51.457"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:51.457" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
+<status status="PASS" starttime="20220401 17:54:51.457" endtime="20220401 17:54:52.099"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:52.099" endtime="20220401 17:54:52.359"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${OS_PASSWORD_FIELD}</arg>
+<arg>${PASSWORD_ANALYTICS_VIEWER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:52.359" level="INFO">Typing text 'QA-Bu1ld1ng-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220401 17:54:52.359" endtime="20220401 17:54:52.480"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${OS_SECOND_SIGN_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:52.480" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
+<status status="PASS" starttime="20220401 17:54:52.480" endtime="20220401 17:54:52.529"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:52.529" endtime="20220401 17:54:54.611"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OFFICE_SHIFTS_HEADER_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:54.611" endtime="20220401 17:54:54.628"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:50.038" endtime="20220401 17:54:54.628"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:50.037" endtime="20220401 17:54:54.629"/>
+</kw>
+<kw name="Delete a shift for a current day" library="OfficeShiftsPage">
+<kw name="Delete a current day shift" library="OfficeShiftsYourShifts">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOOKED_SHIFT_CHECKMARK_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:54.630" endtime="20220401 17:54:56.307"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOOKED_SHIFT_CHECKMARK_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:56.307" level="INFO">Clicking element 'css=.is-today svg'.</msg>
+<status status="PASS" starttime="20220401 17:54:56.307" endtime="20220401 17:54:56.382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DELETE_SHIFT_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:54:56.383" endtime="20220401 17:54:56.406"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DELETE_SHIFT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220401 17:54:56.407" level="INFO">Clicking element 'xpath=/html/body//popup-manager/div[@class='ModalWrapper ModalWrapper--popupManager']//button[@class='MpqButton MpqButton--app MpqButton--red']'.</msg>
+<status status="PASS" starttime="20220401 17:54:56.407" endtime="20220401 17:54:56.451"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220401 17:55:01.460" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220401 17:54:56.451" endtime="20220401 17:55:01.460"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CURRENT_DAY}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220401 17:55:01.460" endtime="20220401 17:55:01.478"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${CURRENT_DAY}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220401 17:55:01.493" level="INFO">Element 'css=.is-today' is displayed.</msg>
+<status status="PASS" starttime="20220401 17:55:01.479" endtime="20220401 17:55:01.493"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:54.629" endtime="20220401 17:55:01.493"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:54.629" endtime="20220401 17:55:01.494"/>
+</kw>
+<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220401 17:55:01.494" endtime="20220401 17:55:03.701"/>
+</kw>
+<status status="PASS" starttime="20220401 17:55:01.494" endtime="20220401 17:55:03.701"/>
+</kw>
+<status status="PASS" starttime="20220401 17:54:46.959" endtime="20220401 17:55:03.702"/>
+</test>
+<doc>Test for confirming an option to book a shift on the Office Shifts page by a End User
+To run this test, enter the "Tests" folder (cd Tests) and enter "robot -d results UserApp.robot/Shift_Booking_End_User.robot" in the Terminal</doc>
+<status status="PASS" starttime="20220401 17:54:15.959" endtime="20220401 17:55:03.704"/>
 </suite>
-<suite id="s1-s5" name="ShiftHostAdmin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\ShiftHostAdmin.robot">
-<test id="s1-s5-t1" name="Login into the Admin Portal as a Shift Host Admin">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:33:51.848" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:33:51.848" endtime="20220401 17:33:53.469"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:33:53.469" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:33:53.469" endtime="20220401 17:33:55.763"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:33:55.763" endtime="20220401 17:33:55.892"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:51.848" endtime="20220401 17:33:55.892"/>
-</kw>
-<kw name="Shift Host Admin Login" library="AdminPortalPage">
-<kw name="Shift Host Admin logs in" library="LandingAdminPortal">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:55.894" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:33:55.894" endtime="20220401 17:33:55.946"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:55.946" endtime="20220401 17:33:57.643"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SHIFT_HOST_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:57.643" level="INFO">Typing text 'qa_shift_host@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:33:57.643" endtime="20220401 17:33:57.813"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:57.813" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:33:57.813" endtime="20220401 17:33:57.924"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:57.924" endtime="20220401 17:33:58.503"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SHIFT_HOST_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:58.503" level="INFO">Typing text 'QA-Sh1ft-Host' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:33:58.503" endtime="20220401 17:33:58.593"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:33:58.594" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:33:58.593" endtime="20220401 17:33:58.893"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:33:58.893" endtime="20220401 17:34:00.883"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:55.893" endtime="20220401 17:34:00.883"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:55.893" endtime="20220401 17:34:00.883"/>
-</kw>
-<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:34:00.884" endtime="20220401 17:34:03.209"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:00.884" endtime="20220401 17:34:03.209"/>
-</kw>
-<status status="PASS" starttime="20220401 17:33:51.846" endtime="20220401 17:34:03.210"/>
-</test>
-<test id="s1-s5-t2" name="Shift Host Admin can see Home, Shifts, People, Access, Analytics, and Settings tabs but not Buildings tab">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:34:03.212" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:34:03.212" endtime="20220401 17:34:04.844"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:34:04.845" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:34:04.844" endtime="20220401 17:34:05.863"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:34:05.864" endtime="20220401 17:34:06.002"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:03.212" endtime="20220401 17:34:06.002"/>
-</kw>
-<kw name="Shift Host Admin Login" library="AdminPortalPage">
-<kw name="Shift Host Admin logs in" library="LandingAdminPortal">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:06.003" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:34:06.003" endtime="20220401 17:34:06.059"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:06.059" endtime="20220401 17:34:07.329"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SHIFT_HOST_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:07.329" level="INFO">Typing text 'qa_shift_host@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:34:07.329" endtime="20220401 17:34:07.537"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:07.538" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:34:07.537" endtime="20220401 17:34:07.957"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:07.957" endtime="20220401 17:34:08.208"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SHIFT_HOST_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:08.208" level="INFO">Typing text 'QA-Sh1ft-Host' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:34:08.208" endtime="20220401 17:34:08.303"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:08.304" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:34:08.303" endtime="20220401 17:34:08.351"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:08.351" endtime="20220401 17:34:10.520"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:06.003" endtime="20220401 17:34:10.520"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:06.002" endtime="20220401 17:34:10.520"/>
-</kw>
-<kw name="Shift Host Admin has Permissions to see Home, Shifts, and Settings tabs but not Buildings, People, Access, and Analytics tab" library="AdminPortalPage">
-<kw name="Shift Host Admin see Home, Shifts, and Settings tabs but not Buildings, People, Access, and Analytics tab" library="AdminPortalTabs">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${HOME_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:10.521" endtime="20220401 17:34:12.934"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SHIFTS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:12.935" endtime="20220401 17:34:12.954"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${BUILDINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:34:12.954" endtime="20220401 17:34:13.163"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${PEOPLE_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:34:13.163" endtime="20220401 17:34:13.178"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${ACCESS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:34:13.178" endtime="20220401 17:34:13.192"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${ANALYTICS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220401 17:34:13.192" endtime="20220401 17:34:13.205"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SETTINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:13.205" endtime="20220401 17:34:13.231"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:10.521" endtime="20220401 17:34:13.231"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:10.520" endtime="20220401 17:34:13.231"/>
-</kw>
-<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:34:13.234" endtime="20220401 17:34:15.595"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:13.233" endtime="20220401 17:34:15.595"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:03.211" endtime="20220401 17:34:15.596"/>
-</test>
-<doc>Tests for a Shift Assistans Admin
-To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/Shift HostAdmin.robot" in the Terminal</doc>
-<status status="PASS" starttime="20220401 17:33:51.834" endtime="20220401 17:34:15.598"/>
-</suite>
-<suite id="s1-s6" name="SubscriptionAdmin" source="C:\Users\d.nedeljkov\Desktop\Automation\Tests\AdminPortal.robot\SubscriptionAdmin.robot">
-<test id="s1-s6-t1" name="Login into the Admin Portal as a Subscription Admin">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:34:15.614" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:34:15.614" endtime="20220401 17:34:17.012"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:34:17.012" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:34:17.012" endtime="20220401 17:34:18.153"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:34:18.153" endtime="20220401 17:34:18.284"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:15.613" endtime="20220401 17:34:18.284"/>
-</kw>
-<kw name="Subscription Admin Login" library="AdminPortalPage">
-<kw name="Subscription Admin Logs in" library="LandingAdminPortal">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:18.285" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:34:18.285" endtime="20220401 17:34:18.343"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:18.343" endtime="20220401 17:34:19.811"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SUBSCRIPTION_ADMIN_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:19.812" level="INFO">Typing text 'qa_subscription_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:34:19.811" endtime="20220401 17:34:20.019"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:20.020" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:34:20.019" endtime="20220401 17:34:20.180"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:20.181" endtime="20220401 17:34:20.688"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SUBSCRIPTION_ADMIN_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:20.689" level="INFO">Typing text 'QA-Subscr1pt1on-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:34:20.688" endtime="20220401 17:34:20.787"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:20.787" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:34:20.787" endtime="20220401 17:34:20.835"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:20.835" endtime="20220401 17:34:23.167"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:18.285" endtime="20220401 17:34:23.167"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:18.284" endtime="20220401 17:34:23.168"/>
-</kw>
-<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:34:23.168" endtime="20220401 17:34:25.502"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:23.168" endtime="20220401 17:34:25.502"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:15.613" endtime="20220401 17:34:25.502"/>
-</test>
-<test id="s1-s6-t2" name="Subscription Admin can see all tabs">
-<kw name="Begin Web Test" library="SetupTeardown" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220401 17:34:25.505" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220401 17:34:25.504" endtime="20220401 17:34:27.036"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220401 17:34:27.037" level="INFO">Opening url 'https://admin-test.mapiq-universe.com/#'</msg>
-<status status="PASS" starttime="20220401 17:34:27.037" endtime="20220401 17:34:28.293"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220401 17:34:28.293" endtime="20220401 17:34:28.415"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:25.504" endtime="20220401 17:34:28.415"/>
-</kw>
-<kw name="Subscription Admin Login" library="AdminPortalPage">
-<kw name="Subscription Admin Logs in" library="LandingAdminPortal">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_FIRST_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:28.416" level="INFO">Clicking button '//body/log-in[@class='Body Login-body']//button[@class='MpqButton']'.</msg>
-<status status="PASS" starttime="20220401 17:34:28.416" endtime="20220401 17:34:28.468"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:28.468" endtime="20220401 17:34:30.069"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${SUBSCRIPTION_ADMIN_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:30.070" level="INFO">Typing text 'qa_subscription_admin@test1.mapiq.net' into text field 'id=signInName'.</msg>
-<status status="PASS" starttime="20220401 17:34:30.069" endtime="20220401 17:34:30.248"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_CONTINUE_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:30.249" level="INFO">Clicking button 'xpath:/html//button[@id='continue']'.</msg>
-<status status="PASS" starttime="20220401 17:34:30.248" endtime="20220401 17:34:30.365"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:30.365" endtime="20220401 17:34:30.963"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_PASSWORD_FIELD}</arg>
-<arg>${SUBSCRIPTION_ADMIN_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:30.963" level="INFO">Typing text 'QA-Subscr1pt1on-Adm1n' into text field 'xpath:/html//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220401 17:34:30.963" endtime="20220401 17:34:31.066"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_SECOND_SIGN_IN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220401 17:34:31.067" level="INFO">Clicking button 'xpath:/html//button[@id='next']'.</msg>
-<status status="PASS" starttime="20220401 17:34:31.066" endtime="20220401 17:34:31.117"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ADMIN_PORTAL_HEADER_TITLE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:31.117" endtime="20220401 17:34:33.991"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:28.416" endtime="20220401 17:34:33.991"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:28.416" endtime="20220401 17:34:33.991"/>
-</kw>
-<kw name="Subscription Admin has Permissions to see all tabs" library="AdminPortalPage">
-<kw name="Subscription Admin can see all tabs" library="AdminPortalTabs">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${HOME_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:33.993" endtime="20220401 17:34:36.195"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SHIFTS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:36.196" endtime="20220401 17:34:36.214"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BUILDINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:36.214" endtime="20220401 17:34:36.235"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PEOPLE_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:36.235" endtime="20220401 17:34:36.258"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ACCESS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:36.258" endtime="20220401 17:34:36.276"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ANALYTICS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:36.276" endtime="20220401 17:34:36.295"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SETTINGS_TAB_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220401 17:34:36.295" endtime="20220401 17:34:36.316"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:33.993" endtime="20220401 17:34:36.316"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:33.993" endtime="20220401 17:34:36.316"/>
-</kw>
-<kw name="End Web Test" library="SetupTeardown" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220401 17:34:36.317" endtime="20220401 17:34:40.236"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:36.317" endtime="20220401 17:34:40.236"/>
-</kw>
-<status status="PASS" starttime="20220401 17:34:25.503" endtime="20220401 17:34:40.237"/>
-</test>
-<doc>Tests for a Subscription Admin
-To run these tests, enter the "Tests" folder (cd Tests) and enter "robot -d results AdminPortal.robot/SubscriptionAdmin.robot" in the Terminal</doc>
-<status status="PASS" starttime="20220401 17:34:15.601" endtime="20220401 17:34:40.239"/>
-</suite>
-<status status="PASS" starttime="20220401 17:32:09.129" endtime="20220401 17:34:40.242"/>
+<status status="PASS" starttime="20220401 17:52:51.368" endtime="20220401 17:55:03.707"/>
 </suite>
 <statistics>
 <total>
-<stat pass="12" fail="0" skip="0">All Tests</stat>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="12" fail="0" skip="0" id="s1" name="AdminPortal.robot">AdminPortal.robot</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="AnalyticsViewerAdmin">AdminPortal.robot.AnalyticsViewerAdmin</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s2" name="BuildingAdmin">AdminPortal.robot.BuildingAdmin</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s3" name="ShiftAdmin">AdminPortal.robot.ShiftAdmin</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s4" name="ShiftAssistantAdmin">AdminPortal.robot.ShiftAssistantAdmin</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s5" name="ShiftHostAdmin">AdminPortal.robot.ShiftHostAdmin</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s6" name="SubscriptionAdmin">AdminPortal.robot.SubscriptionAdmin</stat>
+<stat pass="8" fail="0" skip="0" id="s1" name="UserApp.robot">UserApp.robot</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="About Mapiq Links">UserApp.robot.About Mapiq Links</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="End User Login">UserApp.robot.End User Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="End User Logout">UserApp.robot.End User Logout</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s4" name="Shift Booking End User">UserApp.robot.Shift Booking End User</stat>
 </suite>
 </statistics>
 <errors>
