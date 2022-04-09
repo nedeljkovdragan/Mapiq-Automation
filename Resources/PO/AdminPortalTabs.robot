@@ -14,6 +14,27 @@ ${analytics_tab_button}  xpath=//button[contains(.,'Analytics')]
 ${settings_tab_button}  xpath=//button[contains(.,'Settings')]
 
 *** Keywords ***
+Click on Home tab    
+    Wait Until Element Is Visible    xpath=//button[contains(.,'Home')]
+    Click Element    xpath=//button[contains(.,'Home')]
+Click on Shifts tab
+    Wait Until Element Is Visible    xpath=//button[contains(.,'Shifts')]
+    Click Element    xpath=//button[contains(.,'Shifts')]
+Click on Buildings tab    
+    Wait Until Element Is Visible    xpath=//button[contains(.,'Buildings')]
+    Click Element    xpath=//button[contains(.,'Buildings')]
+Click on People tab    
+    Wait Until Element Is Visible    xpath=//button[contains(.,'People')]
+    Click Element    xpath=//button[contains(.,'People')]
+Click on Access tab
+    Wait Until Element Is Visible    xpath=//button[contains(.,'Access')]
+    Click Element    xpath=//button[contains(.,'Access')]
+Click on Analytics tab    
+    Wait Until Element Is Visible    xpath=//button[contains(.,'Analytics')]
+    Click Element    xpath=//button[contains(.,'Analytics')]
+Click Settings tab
+    Wait Until Element Is Visible    xpath=//button[contains(.,'Settings')]
+    Click Element    xpath=//button[contains(.,'Settings')]
 Subscription Admin can see all tabs
     Wait Until Element Is Visible    ${home_tab_button}
     Wait Until Element Is Visible    ${shifts_tab_button}
