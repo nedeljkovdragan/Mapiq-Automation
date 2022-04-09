@@ -2,6 +2,7 @@
 Library  SeleniumLibrary 
 Resource  ./PO/LandingAdminPortal.robot
 Resource  ./PO/AdminPortalTabs.robot
+Resource  ./PO/PeopleTab.robot
 *** Variables ***
 
 
@@ -36,5 +37,12 @@ Analytics Viewer Admin Login
     LandingAdminPortal.Analytics Viewer Admin logs in
 Analytics Viewer has Permissions to see only Analytics tab
     AdminPortalTabs.Analytics Viewer see Analytics tab only
+#################### Clicking on tabs Tests: #########################
+Admin clicks on the People tab    
+    AdminPortalTabs.Click on People tab 
 
+
+################### Peple tab #####################
+Search for a Building admins account on the "People" page and click on it
+    PeopleTab.Search for a building admin and click on its account
 
