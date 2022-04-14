@@ -31,8 +31,8 @@ Privacy Policy link navigates a user to a right page
 EULA link navigates a user to a right page
     OfficeShiftsYourProfile.EULA navigation
 ################ SHIFT BOOKING ###################
-Book a shift for a current day, for the first building
-    OfficeShiftsYourShifts.Booking a shift for a current day, first building
+Book a shift for a current day, for the first building, first floor, first area
+    OfficeShiftsYourShifts.Booking a shift for a current day, first building, first area
 Edit a shift for a current day
     OfficeShiftsYourShifts.Edit a current day shift
 Delete a shift for a current day

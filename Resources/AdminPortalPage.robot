@@ -45,4 +45,5 @@ Admin clicks on the People tab
 ################### Peple tab #####################
 Search for a Building admins account on the "People" page and click on it
     PeopleTab.Search for a building admin and click on its account
-
+Book a shift as Admin for a current day, for the first building, first floor, first area 
+    PeopleTab.Book a shift as Admin

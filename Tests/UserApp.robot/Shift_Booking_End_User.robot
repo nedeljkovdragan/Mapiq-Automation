@@ -13,7 +13,7 @@ Test Teardown  End Web Test
 Book a shift as an End User for a current day
     Go to the Office Shifts Page
     Log in to the Office Shifts Page
-    Book a shift for a current day, for the first building
+    Book a shift for a current day, for the first building, first floor, first area
 Edit a shift as an End User for a current day
     Go to the Office Shifts Page
     Log in to the Office Shifts Page

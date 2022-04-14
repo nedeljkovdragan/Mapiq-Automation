@@ -13,6 +13,7 @@ Test Teardown  End Web Test
 Subscription Admin books a shift for an End User
     Subscription Admin Login
     Admin clicks on the People tab    
-    Search for a Building admins account on the "People" page and click on it    
+    Search for a Building admins account on the "People" page and click on it
+    Book a shift as Admin for a current day, for the first building, first floor, first area    
 End User gets a notification that Admin has booked a shift for him 
     

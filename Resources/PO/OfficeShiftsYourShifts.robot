@@ -30,7 +30,7 @@ ${status_button}  xpath=//div/div[2]/button
 ${not_at_the_office_popup_button}  xpath=/html/body//page-content//calendar-view/div[@class='CalendarView weekCount-3']/div[@class='CalendarView-topTiles']/div/check-in-status-selector//div[@class='CheckInStatusSelector-options']/div[2]
 ${not_at_the_office_status}  xpath=//body//page-content//calendar-view/div[@class='CalendarView weekCount-3']/div[@class='CalendarView-topTiles']/div/check-in-status-selector//span[@class='CheckInStatusSelector-label']
 *** Keywords ***
-Booking a shift for a current day, first building
+Booking a shift for a current day, first building, first area
     Wait Until Element Is Visible    ${current_day}
     Click Element    ${current_day}
     Wait Until Element Is Visible   ${day_overview_book_button}
