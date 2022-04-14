@@ -47,3 +47,7 @@ Search for a Building admins account on the "People" page and click on it
     PeopleTab.Search for a building admin and click on its account
 Book a shift as Admin for a current day, for the first building, first floor, first area 
     PeopleTab.Book a shift as Admin
+ As Admin, edit a shift for a current day
+    PeopleTab.Edit a shift as an Admin
+As Admin delete a shift for a current day
+    PeopleTab.Delete a shift as Admin

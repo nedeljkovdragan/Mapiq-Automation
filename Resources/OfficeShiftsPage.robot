@@ -4,6 +4,8 @@ Resource  ./PO/LandingOfficeShifts.robot
 Resource  ./PO/OfficeShiftsYourShifts.robot
 Resource  ./PO/OfficeShiftsYourProfile.robot
 Resource  ./PO/OfficeShiftsYourConnections.robot
+Resource  ./PO/OfficeShiftsNotifications.robot
+Resource  ./PO/PeopleTab.robot
 *** Variables ***
 
 *** Keywords ***
@@ -50,6 +52,13 @@ Subscription Admin accepts the connection of a Building Admin
     OfficeShiftsYourConnections.Accept the connection
 Delete a Subscription Admin connection
     OfficeShiftsYourConnections.Delete a connection
-    
-
+############### NOTIFICATIONS ####################
+Click on the "Notifications"
+    OfficeShiftsNotifications."Notifications" click
+Confirm that an End User received a notification that Admin booked a shift for him
+    OfficeShiftsNotifications.Notification received for booked shift by Admin
+Confirm that an End User received a notification that Admin updated a shift for him
+    OfficeShiftsNotifications.Notification received for updated shift
+Confirm that an End User received a notification that Admin deleted a shift for him
+    OfficeShiftsNotifications.Notification received for deleted shift
     
